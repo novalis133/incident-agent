@@ -1,0 +1,21 @@
+alert_title,alert_description,severity,service,expected_alert_type,expected_root_cause_category,expected_confidence_min
+High error rate on payment-service,Error rate exceeded 5% threshold for 5 minutes with 5xx responses,critical,payment-service,error_rate,deployment,0.5
+Elevated 5xx errors on checkout-service,HTTP 500 responses spiked after latest deploy,high,checkout-service,error_rate,deployment,0.5
+Latency spike on order-service,P99 latency increased from 200ms to 2s in the last 10 minutes,high,order-service,latency,dependency,0.4
+Slow response time on user-service,Average response time exceeds 3 second SLO,medium,user-service,latency,resource,0.4
+Pod crash loop on inventory-service,Container restarting every 30 seconds with OOMKilled status,critical,inventory-service,crash,resource,0.5
+OOM killed on recommendation-engine,Pod terminated due to memory limit exceeded after traffic surge,high,recommendation-engine,crash,resource,0.5
+High CPU usage on search-service,CPU utilization at 95% across all pods for 15 minutes,high,search-service,resource,resource,0.4
+Disk space critical on logging-service,Root filesystem at 98% capacity on logging-service nodes,critical,logging-service,resource,resource,0.5
+Database connection pool exhausted,Redis connection pool at 100% capacity causing timeouts,critical,payment-service,dependency,dependency,0.5
+Kafka consumer lag increasing,Consumer group falling behind by 50000 messages on order-events topic,high,order-service,dependency,dependency,0.4
+Config map update failed on auth-service,Service failing to read updated environment variables after configmap change,medium,auth-service,config,config,0.4
+Secret rotation caused service failure,auth-service pods failing after vault secret rotation at 02:00 UTC,high,auth-service,config,config,0.5
+Exception rate spike on notification-service,NullPointerException count tripled after v1.4.2 deployment,high,notification-service,error_rate,deployment,0.5
+Timeout errors on gateway-service,Upstream timeout errors affecting 30% of requests,critical,gateway-service,latency,dependency,0.4
+Container terminated on billing-service,billing-service container killed by SIGKILL with exit code 137,high,billing-service,crash,resource,0.4
+Memory leak detected on analytics-service,Resident memory growing linearly 50MB per hour without release,medium,analytics-service,resource,deployment,0.3
+Dependency failure on shipping-service,External carrier API returning 503 errors for all requests,high,shipping-service,dependency,dependency,0.5
+Environment variable misconfiguration on api-gateway,Missing DATABASE_URL causing connection refused errors on startup,medium,api-gateway,config,config,0.4
+4xx error surge on user-service,HTTP 400 and 403 errors increased by 200% in last hour,medium,user-service,error_rate,config,0.3
+Pod restart storm on cart-service,Multiple pods restarting simultaneously across all replicas,critical,cart-service,crash,deployment,0.4

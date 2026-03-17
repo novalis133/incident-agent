@@ -1,0 +1,94 @@
+# Gradient Agent Configuration
+# https://docs.digitalocean.com/products/gradient/
+
+name: incidentagent
+version: "1.0.0"
+description: "Autonomous AI agent for DevOps incident investigation"
+
+runtime: python3.11
+entrypoint: incidentagent.main:main
+
+# Environment variables (from secrets)
+environment:
+  - DIGITALOCEAN_API_TOKEN
+  - GRADIENT_MODEL_ACCESS_KEY
+  - ELASTICSEARCH_URL
+  - PROMETHEUS_URL
+  - PAGERDUTY_API_KEY
+  - SLACK_WEBHOOK_URL
+
+# Knowledge bases to attach
+knowledge_bases:
+  - name: runbooks
+    id: kb_runbooks
+    type: document
+    
+  - name: incidents
+    id: kb_incidents
+    type: document
+
+# Agent routing configuration
+routing:
+  enabled: true
+  routes:
+    - name: triage
+      description: "Classify and prioritize alerts"
+      agent: triage_agent
+      
+    - name: investigation
+      description: "Investigate incident root cause"
+      agent: investigator_master
+      
+    - name: remediation
+      description: "Generate safe remediation steps"
+      agent: remediation_agent
+
+# Guardrails
+guardrails:
+  enabled: true
+  policies:
+    - name: no_destructive_commands
+      description: "Block dangerous system commands"
+      action: block
+      
+    - name: require_rollback_plan
+      description: "Require rollback plan for high-risk actions"
+      action: require_field
+      
+    - name: production_safety
+      description: "Extra checks for production environment"
+      action: require_approval
+
+# Function calling (tools)
+tools:
+  - name: search_logs
+    description: "Search application logs in Elasticsearch"
+    
+  - name: query_metrics
+    description: "Query Prometheus metrics"
+    
+  - name: get_k8s_events
+    description: "Get Kubernetes events and pod status"
+    
+  - name: search_runbooks
+    description: "Search knowledge base for runbooks"
+    
+  - name: search_past_incidents
+    description: "Search past incidents for similar patterns"
+
+# Evaluation
+evaluation:
+  enabled: true
+  dataset: tests/eval_dataset.csv
+  metrics:
+    - accuracy
+    - latency_p95
+    - root_cause_precision
+    - remediation_safety
+
+# Deployment
+deployment:
+  region: nyc3
+  replicas: 1
+  memory: 2048
+  timeout: 300

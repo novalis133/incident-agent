@@ -1,0 +1,192 @@
+# IncidentAgent Configuration
+
+app:
+  name: incidentagent
+  version: "1.0.0"
+  debug: false
+  log_level: INFO
+
+# Investigation Settings
+investigation:
+  confidence_threshold: 0.85
+  max_agents_per_investigation: 6
+  timeout_seconds: 300
+  early_stop_enabled: true
+
+# Alert Sources
+alert_sources:
+  manual:
+    enabled: true
+    description: "Manual input via UI"
+  
+  webhook:
+    enabled: true
+    endpoint: /api/alerts
+    auth_enabled: false
+    auth_token: ${WEBHOOK_AUTH_TOKEN}
+  
+  prometheus:
+    enabled: false
+    url: ${PROMETHEUS_URL}
+    poll_interval_seconds: 30
+    alertmanager_url: ${ALERTMANAGER_URL}
+  
+  pagerduty:
+    enabled: false
+    api_key: ${PAGERDUTY_API_KEY}
+    poll_interval_seconds: 30
+
+# Sub-Agent Priority by Alert Type
+# Based on research: 80% of incidents follow deployments
+investigation_priority:
+  error_rate:
+    - DeployAgent
+    - LogsAgent
+    - MetricsAgent
+    - K8sAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  latency:
+    - MetricsAgent
+    - LogsAgent
+    - DeployAgent
+    - K8sAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  crash:
+    - K8sAgent
+    - LogsAgent
+    - MetricsAgent
+    - DeployAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  resource:
+    - MetricsAgent
+    - K8sAgent
+    - LogsAgent
+    - DeployAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  dependency:
+    - LogsAgent
+    - MetricsAgent
+    - DeployAgent
+    - K8sAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  config:
+    - DeployAgent
+    - K8sAgent
+    - LogsAgent
+    - MetricsAgent
+    - RunbookAgent
+    - MemoryAgent
+  
+  unknown:
+    - DeployAgent
+    - LogsAgent
+    - MetricsAgent
+    - K8sAgent
+    - RunbookAgent
+    - MemoryAgent
+
+# Data Sources Configuration
+data_sources:
+  elasticsearch:
+    url: ${ELASTICSEARCH_URL}
+    index_pattern: "logs-*"
+    timeout_seconds: 30
+  
+  prometheus:
+    url: ${PROMETHEUS_URL}
+    timeout_seconds: 30
+  
+  kubernetes:
+    config_path: ${KUBERNETES_CONFIG}
+    namespace: default
+    in_cluster: false
+
+# Knowledge Bases (Gradient)
+knowledge_bases:
+  runbooks:
+    id: kb_runbooks
+    path: ./knowledge/runbooks
+    description: "Troubleshooting guides and SOPs"
+  
+  incidents:
+    id: kb_incidents
+    description: "Past resolved incidents"
+
+# Guardrails Configuration
+guardrails:
+  enabled: true
+  
+  blocked_commands:
+    - "rm -rf"
+    - "DROP DATABASE"
+    - "DELETE FROM.*WHERE 1=1"
+    - "kubectl delete namespace"
+    - "terraform destroy"
+  
+  high_risk_commands:
+    - "kubectl delete"
+    - "kubectl scale.*replicas=0"
+    - "ALTER TABLE"
+    - "UPDATE.*SET.*WHERE"
+  
+  require_approval_for:
+    - high_risk
+    - critical_risk
+    - production_database_access
+
+# Output Configuration
+output:
+  dashboard:
+    enabled: true
+    port: 8501
+    host: "0.0.0.0"
+    title: "IncidentAgent Dashboard"
+  
+  reports:
+    enabled: true
+    formats:
+      - markdown
+      - pdf
+      - json
+      - html
+    auto_save: true
+    output_dir: ./reports
+  
+  integrations:
+    pagerduty:
+      enabled: false
+      write_back: true
+      resolve_on_completion: false
+    
+    slack:
+      enabled: false
+      channel: "#incidents"
+      mention_on_critical: true
+
+# Model Training
+training:
+  enabled: true
+  
+  # Train new model after N verified incidents
+  threshold: 100
+  
+  # New model must be this much better to be promoted
+  benchmark_improvement: 0.02
+  
+  # GPU configuration
+  gpu:
+    droplet_size: "gpu-h100x1-80gb"
+    max_training_hours: 4
+  
+  # Evaluation dataset
+  eval_dataset: ./tests/eval_dataset.csv

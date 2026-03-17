@@ -1,0 +1,851 @@
+log_line,category
+"2026-03-16T03:45:10.229Z ERROR [auth-service] DELETE /api/v1/users failed status=429 error=""Internal Server Error"" request_id=1ca6ad9b57a1",error_rate
+2026-03-15T00:12:11.018Z ERROR [cdn-proxy] Circuit breaker OPEN for /api/v1/users failures=23/25 window=30s,error_rate
+"2026-03-13T03:46:27.412Z ERROR [auth-service] gRPC connection to aws-sqs failed: code=UNAVAILABLE desc=""dns resolution failed for aws-sqs.svc.cluster.local""",dependency_failure
+2026-03-16T22:08:15.100Z ERROR [search-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=api-gateway-7f8b6c-xk9mz consecutive_failures=3,deployment_issue
+2026-03-17T02:44:51.062Z DEBUG [cdn-proxy] DNS resolution host=prod-node-02 resolved_in=5ms ttl=199s,normal
+2026-03-12T19:33:07.955Z INFO  [worker-pool] PATCH /api/v1/orders completed status=304 latency=145ms request_id=60e43767ee5e,normal
+2026-03-13T16:38:17.950Z FATAL [search-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=486,error_rate
+2026-03-15T16:08:44.153Z ERROR [analytics-service] ArgoCD sync failed: application analytics-service sync status=OutOfSync health=Degraded,deployment_issue
+2026-03-13T01:00:24.109Z ERROR [cache-manager] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+2026-03-17T02:23:48.359Z ERROR [api-gateway] OOMKilled container=api-gateway pod=api-gateway-7f8b6c-xk9mz namespace=default memory_limit=512Mi usage=511Mi,resource_exhaustion
+"2026-03-11T05:08:15.241Z WARN  [user-service] Canary deployment user-service-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-17T07:01:22.987Z INFO  [analytics-service] Cache hit ratio=0.96 keys=4059 host=staging-node-01,normal
+"2026-03-11T01:12:39.869Z FATAL [cdn-proxy] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-10T12:50:13.116Z WARN  [scheduler] Circuit breaker half-open for aws-s3 testing with 1 request after 30s cooldown,dependency_failure
+2026-03-14T02:05:01.326Z ERROR [event-bus] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-11T01:57:17.330Z WARN  [api-gateway] Circuit breaker half-open for cloudflare-dns testing with 1 request after 30s cooldown,dependency_failure
+2026-03-11T14:27:45.654Z WARN  [order-service] Rollout stalled: deployment/order-service 2/5 replicas available deadline=600s namespace=monitoring,deployment_issue
+2026-03-12T12:20:36.538Z INFO  [order-service] Metrics exported datapoints=263 target=prometheus,normal
+2026-03-15T15:20:11.234Z WARN  [event-bus] CPU throttling detected: 71% throttled periods pod=worker-pool-6e5f4g-vw8xy cpu_limit=500m,resource_exhaustion
+2026-03-17T09:47:05.531Z INFO  [event-bus] Scheduled job cron.cleanup completed in 274ms removed=23 records,normal
+2026-03-09T21:28:36.226Z INFO  [event-bus] Rate limiter token_bucket refilled bucket=event-bus tokens=100 interval=60s,normal
+"2026-03-15T12:35:18.137Z ERROR [auth-service] DELETE /api/v1/payments failed status=403 error=""Internal Server Error"" request_id=57f81c238a82",error_rate
+2026-03-12T20:51:23.323Z INFO  [notification-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-12T21:05:16.692Z WARN  [worker-pool] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/inventory,error_rate
+2026-03-14T04:11:19.058Z ERROR [cache-manager] Circuit breaker OPEN for /api/v1/orders failures=23/25 window=30s,error_rate
+"2026-03-12T02:12:38.416Z ERROR [notification-service] ConfigMap notification-service-config not found in namespace production, using defaults",config_error
+2026-03-10T14:33:08.673Z ERROR [worker-pool] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-11T16:22:32.051Z ERROR [search-service] Circuit breaker OPEN for /api/v1/auth/refresh failures=23/25 window=30s,error_rate
+"2026-03-13T10:39:58.964Z ERROR [payment-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+2026-03-16T04:23:50.450Z ERROR [worker-pool] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-12T16:54:13.371Z ERROR [payment-service] S3 GetObject failed: bucket=prod-assets key=config/payment-service.yaml error=NoSuchBucket request_id=5856abee9b53,dependency_failure
+"2026-03-14T06:30:19.508Z ERROR [cache-manager] Response validation failed: expected 200, got 400 body=""{\""error\"":\""service degraded\""}"" request_id=fbdacb9c7c24",error_rate
+2026-03-12T05:40:52.577Z INFO  [billing-service] Message consumed topic=orders partition=6 offset=588860 lag=0,normal
+2026-03-16T04:47:34.933Z ERROR [cdn-proxy] Secret mount failed: /var/run/secrets/cdn-proxy/api-key: no such file or directory,config_error
+2026-03-11T13:13:09.463Z ERROR [notification-service] CrashLoopBackOff pod=api-gateway-7f8b6c-xk9mz namespace=monitoring restart_count=26 back_off=5m,deployment_issue
+2026-03-15T17:17:02.001Z WARN  [cdn-proxy] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=k8s-worker-2b,resource_exhaustion
+"2026-03-17T03:31:18.469Z ERROR [inventory-service] gRPC connection to aws-sqs failed: code=UNAVAILABLE desc=""dns resolution failed for aws-sqs.svc.cluster.local""",dependency_failure
+"2026-03-15T03:45:31.014Z ERROR [billing-service] Invalid configuration: max_connections must be > 0, got -1 source=/etc/billing-service/config.yaml",config_error
+2026-03-13T08:34:59.950Z ERROR [search-service] Secret mount failed: /var/run/secrets/search-service/api-key: no such file or directory,config_error
+2026-03-14T18:33:22.462Z WARN  [payment-service] Thread pool saturated: active=129/200 queue=109 rejected=15,resource_exhaustion
+2026-03-14T12:33:24.797Z ERROR [inventory-service] Connection pool exhausted: active=97/100 waiting=36 timeout=5000ms db=redis-cache-02,resource_exhaustion
+2026-03-13T12:02:35.087Z INFO  [notification-service] Cache hit ratio=0.91 keys=4538 host=k8s-worker-1a,normal
+2026-03-14T05:25:07.160Z ERROR [auth-service] 500 errors spiking: count=398 window=5m baseline=2,error_rate
+"2026-03-11T21:55:48.916Z ERROR [worker-pool] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/worker-pool.Service/Process",error_rate
+2026-03-16T15:43:06.870Z ERROR [api-gateway] Schema migration version mismatch: expected=42 got=39 database=postgres-replica-1,config_error
+2026-03-13T21:17:53.614Z WARN  [notification-service] Thread pool saturated: active=101/200 queue=812 rejected=33,resource_exhaustion
+2026-03-15T13:26:28.186Z FATAL [inventory-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=475,error_rate
+"2026-03-15T18:49:30.637Z ERROR [notification-service] MongoDB replica set election in progress: redis-cache-01 error=""not primary"" retrying in 8s",dependency_failure
+2026-03-12T12:44:50.563Z INFO  [analytics-service] Metrics exported datapoints=301 target=prometheus,normal
+2026-03-16T14:49:04.811Z INFO  [order-service] PUT /api/v1/payments completed status=301 latency=244ms request_id=ab4581df0372,normal
+2026-03-13T15:33:41.285Z DEBUG [auth-service] Connection pool stats: active=5 idle=15 total=20 host=staging-node-01,normal
+2026-03-13T14:45:40.573Z WARN  [auth-service] Thread pool saturated: active=138/200 queue=471 rejected=44,resource_exhaustion
+"2026-03-11T11:24:37.248Z ERROR [auth-service] PUT /api/v1/auth/refresh failed status=502 error=""Internal Server Error"" request_id=68d47e342986",error_rate
+"2026-03-10T07:17:19.298Z ERROR [search-service] Helm release failed: upgrade ""search-service"" failed: timed out waiting for the condition namespace=kube-system",deployment_issue
+2026-03-12T14:52:21.007Z ERROR [event-bus] S3 GetObject failed: bucket=prod-assets key=config/event-bus.yaml error=NoSuchBucket request_id=6c323385f9f7,dependency_failure
+2026-03-17T03:53:30.622Z ERROR [worker-pool] Helm values override conflict: both 'replicas' and 'autoscaling.enabled' are set,config_error
+2026-03-10T06:22:46.067Z INFO  [notification-service] Cache hit ratio=0.86 keys=3385 host=prod-node-03,normal
+2026-03-16T15:21:09.735Z ERROR [billing-service] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-02,resource_exhaustion
+2026-03-12T23:58:34.250Z DEBUG [cache-manager] TLS handshake completed peer=prod-node-03:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+"2026-03-15T00:04:15.379Z ERROR [event-bus] gRPC connection to datadog-agent failed: code=UNAVAILABLE desc=""dns resolution failed for datadog-agent.svc.cluster.local""",dependency_failure
+"2026-03-10T12:27:38.032Z WARN  [search-service] TLS certificate path /etc/ssl/search-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-14T01:18:15.658Z ERROR [cache-manager] Circuit breaker OPEN for /api/v1/users failures=23/25 window=30s,error_rate
+2026-03-15T01:38:29.522Z FATAL [cdn-proxy] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-02 pid=62727,resource_exhaustion
+"2026-03-14T23:41:37.703Z ERROR [search-service] Init container failed: exit code 1 container=db-migration pod=auth-service-5d4e3f-qr7ws reason=""migration failed""",deployment_issue
+2026-03-10T07:06:15.335Z ERROR [billing-service] OOMKilled container=billing-service pod=order-service-3c2d1e-jk5gh namespace=monitoring memory_limit=512Mi usage=511Mi,resource_exhaustion
+2026-03-15T00:32:38.064Z WARN  [order-service] Rolling update paused: maxUnavailable reached deployment/order-service unavailable=3,deployment_issue
+2026-03-16T23:38:48.943Z ERROR [search-service] Unhandled exception in request handler: NullPointerException at com.search-service.handler.process(Handler.java:142) request_id=cbc80f8f256e,error_rate
+2026-03-12T10:00:02.363Z INFO  [user-service] Session created user_id=6f395aae1ad4 ip=10.62.207.237 ttl=3600s,normal
+"2026-03-14T18:47:54.589Z WARN  [api-gateway] Consul health check failing for cloudflare-dns: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-11T18:45:16.949Z ERROR [search-service] Too many open files: ulimit=3383 current=3951 host=k8s-worker-3c,resource_exhaustion
+"2026-03-12T16:25:54.300Z WARN  [event-bus] TLS certificate path /etc/ssl/event-bus/tls.crt does not exist, disabling TLS",config_error
+2026-03-13T14:39:22.295Z INFO  [billing-service] Metrics exported datapoints=70 target=prometheus,normal
+"2026-03-16T08:42:35.086Z WARN  [user-service] Retry attempt 3/5 for PATCH /healthz last_error=""connection reset by peer""",error_rate
+2026-03-11T15:21:12.907Z INFO  [billing-service] Cache hit ratio=0.98 keys=3814 host=prod-node-03,normal
+"2026-03-16T23:08:25.286Z WARN  [order-service] TLS certificate path /etc/ssl/order-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-09T22:20:30.959Z FATAL [cache-manager] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=132,error_rate
+2026-03-13T23:27:43.015Z ERROR [inventory-service] 500 errors spiking: count=492 window=5m baseline=2,error_rate
+"2026-03-13T14:17:20.241Z ERROR [search-service] Traceback (most recent call last):\n  File ""/app/search-service/views.py"", line 145, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-15T09:30:14.706Z WARN  [search-service] File descriptor leak detected: open_fds=1333 baseline=258 host=prod-node-02,resource_exhaustion
+2026-03-14T07:26:38.874Z DEBUG [cache-manager] DNS resolution host=k8s-worker-1a resolved_in=13ms ttl=231s,normal
+2026-03-16T00:48:09.155Z FATAL [cdn-proxy] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-3c pid=17467,resource_exhaustion
+2026-03-14T08:20:03.088Z ERROR [inventory-service] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-03,resource_exhaustion
+2026-03-13T03:07:28.721Z ERROR [billing-service] DNS resolution failed for sendgrid-email.internal: NXDOMAIN query_time=3988ms,dependency_failure
+2026-03-15T13:19:02.407Z DEBUG [scheduler] TLS handshake completed peer=prod-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+"2026-03-15T15:38:44.974Z ERROR [inventory-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+2026-03-13T14:14:01.296Z ERROR [analytics-service] Too many open files: ulimit=2704 current=2869 host=staging-node-01,resource_exhaustion
+2026-03-17T11:31:09.199Z DEBUG [billing-service] Connection pool stats: active=5 idle=15 total=20 host=k8s-worker-2b,normal
+2026-03-09T20:06:03.796Z INFO  [auth-service] Scheduled job cron.cleanup completed in 22ms removed=15 records,normal
+"2026-03-12T15:29:37.362Z ERROR [inventory-service] Vault sealed: unable to retrieve secret secret/inventory-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-16T22:17:17.161Z ERROR [api-gateway] Connection pool exhausted: active=97/100 waiting=12 timeout=5000ms db=redis-cache-02,resource_exhaustion
+2026-03-13T19:48:38.576Z ERROR [cdn-proxy] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-17T13:21:26.425Z ERROR [billing-service] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-11T12:26:12.733Z DEBUG [user-service] TLS handshake completed peer=k8s-worker-1a:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-11T04:47:17.820Z ERROR [notification-service] Unhandled exception in request handler: NullPointerException at com.notification-service.handler.process(Handler.java:142) request_id=243da3840f3f,error_rate
+2026-03-13T08:47:16.518Z ERROR [worker-pool] CrashLoopBackOff pod=payment-service-9a8b7c-lm2np namespace=staging restart_count=36 back_off=5m,deployment_issue
+2026-03-14T23:29:18.853Z INFO  [auth-service] Message consumed topic=orders partition=9 offset=933907 lag=0,normal
+"2026-03-17T02:34:55.149Z ERROR [event-bus] Traceback (most recent call last):\n  File ""/app/event-bus/views.py"", line 280, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-16T08:37:56.537Z DEBUG [notification-service] DNS resolution host=k8s-worker-2b resolved_in=14ms ttl=282s,normal
+2026-03-12T13:16:07.837Z INFO  [event-bus] Scheduled job cron.cleanup completed in 179ms removed=3 records,normal
+"2026-03-10T12:47:44.881Z ERROR [cache-manager] Database connection lost: postgres-replica-1 error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+"2026-03-13T00:18:43.655Z ERROR [search-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+2026-03-15T02:40:48.952Z INFO  [worker-pool] Metrics exported datapoints=481 target=prometheus,normal
+2026-03-16T23:07:53.947Z WARN  [inventory-service] Swap usage high: 78% used (4GB/7GB) host=staging-node-01,resource_exhaustion
+"2026-03-14T21:48:01.754Z ERROR [auth-service] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-14T01:19:51.847Z INFO  [payment-service] DELETE /api/v1/auth/login completed status=201 latency=141ms request_id=f06e70bb490b,normal
+"2026-03-14T17:03:57.820Z ERROR [scheduler] Traceback (most recent call last):\n  File ""/app/scheduler/views.py"", line 119, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-14T02:41:13.041Z ERROR [auth-service] DNS resolution failed for sendgrid-email.internal: NXDOMAIN query_time=4961ms,dependency_failure
+2026-03-16T12:45:33.317Z ERROR [billing-service] Circuit breaker OPEN for /api/v1/orders failures=23/25 window=30s,error_rate
+2026-03-12T22:57:54.802Z INFO  [scheduler] Graceful shutdown initiated pid=61192 signal=SIGTERM,normal
+2026-03-13T05:51:12.462Z INFO  [analytics-service] Metrics exported datapoints=378 target=prometheus,normal
+2026-03-11T22:43:05.375Z DEBUG [api-gateway] Connection pool stats: active=5 idle=15 total=20 host=staging-node-01,normal
+"2026-03-12T22:09:25.554Z WARN  [cdn-proxy] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-17T00:05:50.918Z DEBUG [inventory-service] TLS handshake completed peer=k8s-worker-3c:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-16T15:15:32.467Z INFO  [cdn-proxy] Scheduled job cron.cleanup completed in 244ms removed=31 records,normal
+"2026-03-12T03:03:40.015Z ERROR [scheduler] ImagePullBackOff: failed to pull image registry.internal/scheduler:v2.17.83 error=""manifest unknown""",deployment_issue
+2026-03-12T17:01:28.893Z INFO  [worker-pool] Successfully processed request request_id=3b88907a7c11 duration=143ms,normal
+"2026-03-11T11:36:53.084Z ERROR [order-service] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=fbd733b35545",error_rate
+2026-03-17T08:38:22.237Z INFO  [payment-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-11T13:54:46.821Z ERROR [billing-service] Node scheduling failed: 0/5 nodes available: insufficient cpu pod=worker-pool-6e5f4g-vw8xy,deployment_issue
+"2026-03-12T14:51:05.795Z FATAL [analytics-service] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-13T06:38:50.297Z FATAL [payment-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=64,error_rate
+"2026-03-15T14:31:17.878Z ERROR [order-service] Traceback (most recent call last):\n  File ""/app/order-service/views.py"", line 262, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-15T10:13:02.694Z INFO  [billing-service] Successfully processed request request_id=58d02bb34a3f duration=59ms,normal
+2026-03-10T16:32:30.853Z ERROR [analytics-service] Schema migration version mismatch: expected=42 got=39 database=mongodb-analytics,config_error
+2026-03-11T11:06:07.114Z ERROR [cache-manager] Too many open files: ulimit=1137 current=1121 host=k8s-worker-3c,resource_exhaustion
+2026-03-13T12:00:35.599Z ERROR [search-service] Evicted pod=worker-pool-6e5f4g-vw8xy namespace=kube-system reason=The node was low on resource: memory,resource_exhaustion
+"2026-03-16T21:13:50.447Z ERROR [user-service] ImagePullBackOff: failed to pull image registry.internal/user-service:v3.8.28 error=""manifest unknown""",deployment_issue
+2026-03-16T14:45:14.315Z INFO  [payment-service] Message consumed topic=orders partition=2 offset=815211 lag=0,normal
+2026-03-15T01:18:58.489Z ERROR [order-service] DNS resolution failed for cloudflare-dns.internal: NXDOMAIN query_time=4375ms,dependency_failure
+2026-03-16T10:09:55.011Z INFO  [analytics-service] Message consumed topic=orders partition=10 offset=540246 lag=0,normal
+2026-03-15T13:40:42.425Z INFO  [user-service] Scheduled job cron.cleanup completed in 303ms removed=32 records,normal
+2026-03-13T05:30:55.678Z INFO  [worker-pool] Message consumed topic=orders partition=7 offset=146007 lag=0,normal
+"2026-03-13T16:08:27.118Z ERROR [worker-pool] Helm release failed: upgrade ""worker-pool"" failed: timed out waiting for the condition namespace=staging",deployment_issue
+2026-03-09T18:29:28.690Z ERROR [event-bus] CrashLoopBackOff pod=order-service-3c2d1e-jk5gh namespace=staging restart_count=17 back_off=5m,deployment_issue
+"2026-03-15T13:16:22.714Z ERROR [billing-service] TLS handshake failed: twilio-sms:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-13T01:00:17.588Z ERROR [inventory-service] DNS resolution failed for sendgrid-email.internal: NXDOMAIN query_time=2672ms,dependency_failure
+2026-03-16T11:39:35.827Z FATAL [search-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-2b,config_error
+2026-03-14T14:47:51.323Z FATAL [auth-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=88,error_rate
+"2026-03-15T14:47:50.352Z ERROR [billing-service] Database connection lost: elasticsearch-cluster error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+2026-03-16T22:46:57.851Z DEBUG [search-service] DNS resolution host=prod-node-03 resolved_in=4ms ttl=249s,normal
+"2026-03-11T12:34:21.638Z WARN  [scheduler] Canary deployment scheduler-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+"2026-03-14T20:59:09.346Z ERROR [api-gateway] Database connection lost: mysql-orders error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+"2026-03-16T09:42:06.637Z ERROR [notification-service] Traceback (most recent call last):\n  File ""/app/notification-service/views.py"", line 248, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-14T12:01:54.434Z INFO  [inventory-service] Metrics exported datapoints=138 target=prometheus,normal
+2026-03-10T22:14:05.618Z INFO  [auth-service] Rate limiter token_bucket refilled bucket=auth-service tokens=100 interval=60s,normal
+2026-03-17T09:24:01.907Z ERROR [notification-service] Unhandled exception in request handler: NullPointerException at com.notification-service.handler.process(Handler.java:142) request_id=04f7cb03e501,error_rate
+"2026-03-10T14:51:16.988Z ERROR [inventory-service] Database connection lost: postgres-replica-1 error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+2026-03-11T23:55:51.218Z INFO  [cache-manager] Metrics exported datapoints=338 target=prometheus,normal
+"2026-03-13T20:01:54.833Z WARN  [api-gateway] Consul health check failing for cloudflare-dns: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-14T10:14:13.302Z INFO  [payment-service] Metrics exported datapoints=258 target=prometheus,normal
+2026-03-15T17:04:59.266Z INFO  [scheduler] Successfully processed request request_id=6abccb41afc3 duration=42ms,normal
+2026-03-16T15:00:30.118Z INFO  [event-bus] Metrics exported datapoints=418 target=prometheus,normal
+"2026-03-09T23:10:30.077Z ERROR [api-gateway] Invalid configuration: max_connections must be > 0, got -1 source=/etc/api-gateway/config.yaml",config_error
+2026-03-13T23:27:24.786Z INFO  [cdn-proxy] Rate limiter token_bucket refilled bucket=cdn-proxy tokens=100 interval=60s,normal
+2026-03-17T12:07:40.873Z FATAL [analytics-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=105,error_rate
+2026-03-10T11:45:48.701Z ERROR [api-gateway] Connection refused to redis-cache-01 host=10.0.23.211:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-17T13:03:34.778Z ERROR [inventory-service] 500 errors spiking: count=295 window=5m baseline=10,error_rate
+2026-03-17T05:28:13.593Z ERROR [order-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+"2026-03-12T01:41:48.497Z ERROR [cache-manager] GET /api/v1/notifications failed status=404 error=""Internal Server Error"" request_id=9923cf2f0456",error_rate
+2026-03-13T03:26:23.185Z ERROR [auth-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=auth-service-5d4e3f-qr7ws consecutive_failures=3,deployment_issue
+2026-03-17T06:26:57.717Z ERROR [auth-service] CrashLoopBackOff pod=payment-service-9a8b7c-lm2np namespace=monitoring restart_count=25 back_off=5m,deployment_issue
+2026-03-15T04:57:12.614Z INFO  [api-gateway] Graceful shutdown initiated pid=38844 signal=SIGTERM,normal
+2026-03-12T07:24:05.685Z INFO  [cdn-proxy] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+"2026-03-10T21:45:54.643Z ERROR [analytics-service] Response validation failed: expected 200, got 400 body=""{\""error\"":\""service degraded\""}"" request_id=d3cb9071b47b",error_rate
+2026-03-17T13:10:27.195Z INFO  [billing-service] GET /healthz completed status=301 latency=117ms request_id=795f41c8a7a2,normal
+"2026-03-15T03:41:04.650Z ERROR [payment-service] Traceback (most recent call last):\n  File ""/app/payment-service/views.py"", line 121, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+"2026-03-16T02:30:12.424Z ERROR [api-gateway] PUT /metrics failed status=500 error=""Internal Server Error"" request_id=6926b57b52fd",error_rate
+2026-03-09T18:51:48.413Z INFO  [scheduler] Worker thread started thread_id=11 pool_size=16,normal
+2026-03-11T17:36:17.032Z ERROR [billing-service] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+"2026-03-09T17:40:39.070Z ERROR [analytics-service] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/analytics-service.Service/Process",error_rate
+2026-03-12T23:15:27.796Z ERROR [billing-service] HTTP 503 Service Unavailable upstream=sendgrid-email retries=3/3 request_id=01438b33f87b,error_rate
+2026-03-13T02:28:22.186Z ERROR [order-service] DNS resolution failed for sendgrid-email.internal: NXDOMAIN query_time=4072ms,dependency_failure
+"2026-03-12T13:14:02.321Z WARN  [order-service] Retry attempt 3/5 for PATCH /api/v1/users last_error=""connection reset by peer""",error_rate
+2026-03-12T14:29:52.370Z INFO  [search-service] Cache hit ratio=0.96 keys=4668 host=prod-node-02,normal
+2026-03-17T06:48:51.985Z ERROR [inventory-service] Connection refused to redis-cache-02 host=10.0.11.194:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-11T12:52:34.894Z INFO  [inventory-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-12T20:02:47.657Z ERROR [analytics-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-15T16:05:57.113Z INFO  [analytics-service] Session created user_id=a534d6ccf75b ip=10.39.58.22 ttl=3600s,normal
+"2026-03-12T10:41:07.836Z WARN  [scheduler] TLS certificate path /etc/ssl/scheduler/tls.crt does not exist, disabling TLS",config_error
+2026-03-15T11:56:05.078Z DEBUG [inventory-service] Connection pool stats: active=5 idle=15 total=20 host=prod-node-01,normal
+"2026-03-11T03:16:28.415Z ERROR [event-bus] Invalid configuration: max_connections must be > 0, got -1 source=/etc/event-bus/config.yaml",config_error
+2026-03-14T05:26:37.926Z FATAL [payment-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=349,error_rate
+2026-03-10T02:30:44.018Z ERROR [order-service] Helm values override conflict: both 'replicas' and 'autoscaling.enabled' are set,config_error
+2026-03-16T18:00:26.837Z FATAL [inventory-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=staging-node-01,config_error
+2026-03-10T09:16:10.743Z ERROR [api-gateway] Circuit breaker OPEN for /api/v1/payments failures=23/25 window=30s,error_rate
+2026-03-13T01:51:19.023Z INFO  [cache-manager] Scheduled job cron.cleanup completed in 333ms removed=44 records,normal
+"2026-03-15T18:12:26.211Z ERROR [cache-manager] gRPC connection to sendgrid-email failed: code=UNAVAILABLE desc=""dns resolution failed for sendgrid-email.svc.cluster.local""",dependency_failure
+2026-03-15T22:46:53.198Z ERROR [event-bus] CrashLoopBackOff pod=order-service-3c2d1e-jk5gh namespace=monitoring restart_count=31 back_off=5m,deployment_issue
+"2026-03-15T19:45:54.144Z ERROR [analytics-service] ConfigMap analytics-service-config not found in namespace production, using defaults",config_error
+"2026-03-16T02:13:40.011Z ERROR [order-service] Response validation failed: expected 200, got 502 body=""{\""error\"":\""service degraded\""}"" request_id=12c2da415ba1",error_rate
+"2026-03-09T21:45:14.521Z ERROR [user-service] MongoDB replica set election in progress: postgres-primary error=""not primary"" retrying in 9s",dependency_failure
+2026-03-12T02:06:42.266Z ERROR [notification-service] OOMKilled container=notification-service pod=worker-pool-6e5f4g-vw8xy namespace=staging memory_limit=512Mi usage=511Mi,resource_exhaustion
+2026-03-14T20:12:32.661Z ERROR [analytics-service] YAML parse error in /etc/analytics-service/config.yaml: line 47: mapping values are not allowed here,config_error
+2026-03-13T23:17:22.003Z ERROR [cdn-proxy] S3 GetObject failed: bucket=prod-assets key=config/cdn-proxy.yaml error=NoSuchBucket request_id=c931dab857b8,dependency_failure
+2026-03-17T11:16:29.602Z INFO  [search-service] Metrics exported datapoints=114 target=prometheus,normal
+2026-03-10T23:45:02.915Z ERROR [payment-service] Circuit breaker OPEN for /api/v1/orders failures=23/25 window=30s,error_rate
+2026-03-12T05:09:46.820Z FATAL [auth-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=60,error_rate
+2026-03-10T23:18:46.279Z FATAL [order-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-1a,config_error
+"2026-03-10T22:45:29.369Z ERROR [api-gateway] Vault sealed: unable to retrieve secret secret/api-gateway/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-11T13:49:50.302Z ERROR [payment-service] S3 GetObject failed: bucket=prod-assets key=config/payment-service.yaml error=NoSuchBucket request_id=be9f66768b5d,dependency_failure
+"2026-03-11T03:21:27.677Z ERROR [cache-manager] gRPC connection to twilio-sms failed: code=UNAVAILABLE desc=""dns resolution failed for twilio-sms.svc.cluster.local""",dependency_failure
+"2026-03-14T09:43:20.191Z ERROR [auth-service] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=7bf5ed214329",error_rate
+2026-03-16T03:18:54.290Z WARN  [search-service] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-01,resource_exhaustion
+2026-03-14T20:40:25.223Z WARN  [user-service] File descriptor leak detected: open_fds=2160 baseline=129 host=prod-node-03,resource_exhaustion
+2026-03-14T00:46:44.808Z FATAL [worker-pool] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-01 pid=34599,resource_exhaustion
+"2026-03-10T01:25:59.069Z ERROR [notification-service] gRPC connection to datadog-agent failed: code=UNAVAILABLE desc=""dns resolution failed for datadog-agent.svc.cluster.local""",dependency_failure
+2026-03-15T11:26:10.955Z WARN  [payment-service] Swap usage high: 80% used (3GB/7GB) host=prod-node-02,resource_exhaustion
+"2026-03-09T18:20:08.737Z ERROR [event-bus] PUT /api/v1/payments failed status=401 error=""Internal Server Error"" request_id=162fbeac7623",error_rate
+2026-03-17T06:39:20.614Z FATAL [event-bus] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-01,config_error
+"2026-03-13T08:52:56.668Z ERROR [event-bus] ImagePullBackOff: failed to pull image registry.internal/event-bus:v4.11.61 error=""manifest unknown""",deployment_issue
+"2026-03-10T23:49:17.361Z ERROR [payment-service] Vault sealed: unable to retrieve secret secret/payment-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-13T23:49:07.682Z ERROR [scheduler] ArgoCD sync failed: application scheduler sync status=OutOfSync health=Degraded,deployment_issue
+2026-03-14T08:28:39.331Z ERROR [cache-manager] Request timeout after 30000ms DELETE /api/v1/auth/login request_id=83116af0fd94,error_rate
+2026-03-14T02:03:21.543Z FATAL [auth-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-02,config_error
+2026-03-11T16:31:48.632Z INFO  [order-service] Successfully processed request request_id=1f3ea43b343c duration=192ms,normal
+"2026-03-13T02:55:13.892Z ERROR [auth-service] gRPC connection to stripe-api failed: code=UNAVAILABLE desc=""dns resolution failed for stripe-api.svc.cluster.local""",dependency_failure
+2026-03-15T20:56:36.877Z WARN  [search-service] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=k8s-worker-3c,resource_exhaustion
+2026-03-15T22:56:05.593Z WARN  [api-gateway] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/auth/refresh,error_rate
+2026-03-15T18:59:07.871Z INFO  [order-service] Session created user_id=e714843656cd ip=10.162.219.135 ttl=3600s,normal
+2026-03-11T13:59:49.116Z ERROR [cache-manager] Too many open files: ulimit=1891 current=1486 host=prod-node-02,resource_exhaustion
+2026-03-12T22:49:14.477Z WARN  [payment-service] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=k8s-worker-3c,resource_exhaustion
+2026-03-17T08:46:25.452Z WARN  [inventory-service] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=prod-node-03,resource_exhaustion
+"2026-03-12T22:49:28.486Z ERROR [scheduler] Helm release failed: upgrade ""scheduler"" failed: timed out waiting for the condition namespace=production",deployment_issue
+2026-03-12T09:17:00.756Z ERROR [cache-manager] DNS resolution failed for vault-server.internal: NXDOMAIN query_time=4960ms,dependency_failure
+2026-03-17T08:06:29.013Z WARN  [worker-pool] Circuit breaker half-open for twilio-sms testing with 1 request after 30s cooldown,dependency_failure
+"2026-03-12T17:13:35.505Z WARN  [api-gateway] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-14T23:44:48.214Z FATAL [cdn-proxy] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=435,error_rate
+2026-03-12T17:21:20.830Z INFO  [worker-pool] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+"2026-03-11T18:38:46.954Z WARN  [cdn-proxy] Consul health check failing for stripe-api: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-14T14:02:34.051Z ERROR [cache-manager] DELETE /api/v2/search failed status=401 error=""Internal Server Error"" request_id=cf583bb8b5e9",error_rate
+"2026-03-10T06:58:13.793Z WARN  [analytics-service] Retry attempt 3/5 for PATCH /api/v1/inventory last_error=""connection reset by peer""",error_rate
+2026-03-13T11:23:01.394Z ERROR [api-gateway] Helm values override conflict: both 'replicas' and 'autoscaling.enabled' are set,config_error
+2026-03-10T23:06:16.338Z INFO  [payment-service] Graceful shutdown initiated pid=31660 signal=SIGTERM,normal
+2026-03-11T06:52:20.029Z INFO  [analytics-service] Deployment readiness probe succeeded pod=auth-service-5d4e3f-qr7ws namespace=default,normal
+2026-03-15T08:09:47.418Z INFO  [api-gateway] Session created user_id=6c90f87d0d1b ip=10.208.25.66 ttl=3600s,normal
+"2026-03-13T19:00:58.672Z ERROR [payment-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+"2026-03-10T12:01:25.184Z WARN  [analytics-service] TLS certificate path /etc/ssl/analytics-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-12T18:34:13.054Z ERROR [event-bus] S3 GetObject failed: bucket=prod-assets key=config/event-bus.yaml error=NoSuchBucket request_id=5be65b7f57bb,dependency_failure
+2026-03-15T18:47:48.593Z INFO  [analytics-service] Metrics exported datapoints=494 target=prometheus,normal
+"2026-03-10T06:15:10.111Z ERROR [cdn-proxy] Database connection lost: mongodb-analytics error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+2026-03-12T17:58:05.447Z INFO  [notification-service] Message consumed topic=orders partition=4 offset=605921 lag=0,normal
+2026-03-10T12:15:07.112Z INFO  [cache-manager] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-11T01:58:51.522Z INFO  [cdn-proxy] Session created user_id=333c715c0e1c ip=10.87.183.193 ttl=3600s,normal
+2026-03-15T22:57:03.285Z ERROR [billing-service] Redis READONLY: You can't write against a read only replica host=redis-cache-01 command=SET,dependency_failure
+2026-03-16T07:50:03.063Z WARN  [order-service] Circuit breaker half-open for aws-s3 testing with 1 request after 30s cooldown,dependency_failure
+2026-03-12T02:34:28.403Z ERROR [analytics-service] Request timeout after 30000ms PATCH /readyz request_id=d5a25ae0f794,error_rate
+2026-03-16T01:37:21.404Z FATAL [notification-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-02 pid=59582,resource_exhaustion
+2026-03-10T20:33:59.763Z DEBUG [auth-service] Connection pool stats: active=5 idle=15 total=20 host=staging-node-01,normal
+2026-03-11T20:13:18.645Z WARN  [search-service] Upstream aws-s3 responding slowly: p99=13168ms p50=1684ms threshold=1000ms,dependency_failure
+2026-03-11T10:44:52.211Z WARN  [user-service] Circuit breaker half-open for stripe-api testing with 1 request after 30s cooldown,dependency_failure
+2026-03-12T05:12:32.963Z INFO  [billing-service] Message consumed topic=orders partition=11 offset=453855 lag=0,normal
+"2026-03-11T00:40:12.942Z ERROR [cache-manager] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=588a8ed024ae",error_rate
+"2026-03-16T09:18:57.858Z ERROR [inventory-service] Vault sealed: unable to retrieve secret secret/inventory-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-14T13:43:05.492Z ERROR [cdn-proxy] Kafka broker unreachable: broker_id=0 host=kafka-1.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-16T04:55:11.191Z ERROR [payment-service] 500 errors spiking: count=66 window=5m baseline=9,error_rate
+"2026-03-17T01:58:35.383Z ERROR [payment-service] gRPC connection to aws-sqs failed: code=UNAVAILABLE desc=""dns resolution failed for aws-sqs.svc.cluster.local""",dependency_failure
+"2026-03-17T04:23:37.837Z ERROR [cdn-proxy] Response validation failed: expected 200, got 429 body=""{\""error\"":\""service degraded\""}"" request_id=320f36ab9192",error_rate
+2026-03-11T01:15:06.806Z FATAL [inventory-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-02 pid=63703,resource_exhaustion
+"2026-03-16T01:32:24.654Z ERROR [event-bus] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+"2026-03-16T18:00:53.040Z ERROR [api-gateway] MongoDB replica set election in progress: redis-cache-01 error=""not primary"" retrying in 5s",dependency_failure
+"2026-03-11T19:25:56.845Z ERROR [api-gateway] Vault sealed: unable to retrieve secret secret/api-gateway/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-14T08:33:07.121Z INFO  [cdn-proxy] Session created user_id=617213e130c6 ip=10.196.146.158 ttl=3600s,normal
+2026-03-15T08:35:07.251Z INFO  [analytics-service] Deployment readiness probe succeeded pod=auth-service-5d4e3f-qr7ws namespace=default,normal
+2026-03-15T16:51:31.662Z INFO  [worker-pool] Worker thread started thread_id=39 pool_size=16,normal
+2026-03-15T03:46:21.664Z DEBUG [worker-pool] DNS resolution host=k8s-worker-2b resolved_in=4ms ttl=224s,normal
+2026-03-17T07:06:44.013Z ERROR [cdn-proxy] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-11T22:03:20.200Z ERROR [notification-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=order-service-3c2d1e-jk5gh consecutive_failures=3,deployment_issue
+2026-03-12T16:52:55.809Z ERROR [notification-service] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-01,resource_exhaustion
+"2026-03-11T17:45:35.473Z ERROR [scheduler] MongoDB replica set election in progress: mysql-orders error=""not primary"" retrying in 1s",dependency_failure
+"2026-03-14T16:32:00.091Z WARN  [scheduler] Canary deployment scheduler-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+"2026-03-14T02:07:48.401Z ERROR [cache-manager] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/cache-manager.Service/Process",error_rate
+"2026-03-16T02:16:00.135Z ERROR [inventory-service] gRPC connection to twilio-sms failed: code=UNAVAILABLE desc=""dns resolution failed for twilio-sms.svc.cluster.local""",dependency_failure
+"2026-03-10T11:36:18.227Z ERROR [analytics-service] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/analytics-service.Service/Process",error_rate
+2026-03-12T22:57:18.979Z WARN  [user-service] Rollout stalled: deployment/user-service 2/5 replicas available deadline=600s namespace=production,deployment_issue
+2026-03-13T12:11:17.429Z INFO  [inventory-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+"2026-03-12T17:06:11.475Z WARN  [worker-pool] TLS certificate path /etc/ssl/worker-pool/tls.crt does not exist, disabling TLS",config_error
+2026-03-13T13:21:14.206Z FATAL [cache-manager] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=86,error_rate
+2026-03-16T05:34:41.543Z INFO  [scheduler] Successfully processed request request_id=7d7542611419 duration=331ms,normal
+"2026-03-15T15:05:08.171Z ERROR [scheduler] Traceback (most recent call last):\n  File ""/app/scheduler/views.py"", line 96, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-13T20:54:13.643Z DEBUG [worker-pool] TLS handshake completed peer=prod-node-02:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-13T13:59:40.826Z ERROR [scheduler] Circuit breaker OPEN for /api/v1/auth/refresh failures=23/25 window=30s,error_rate
+2026-03-14T01:03:55.432Z DEBUG [cache-manager] DNS resolution host=k8s-worker-3c resolved_in=9ms ttl=287s,normal
+2026-03-16T00:42:02.428Z WARN  [inventory-service] Swap usage high: 89% used (4GB/5GB) host=prod-node-01,resource_exhaustion
+2026-03-10T15:53:39.746Z WARN  [payment-service] CPU throttling detected: 60% throttled periods pod=auth-service-5d4e3f-qr7ws cpu_limit=500m,resource_exhaustion
+"2026-03-12T00:21:42.094Z WARN  [api-gateway] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-12T00:43:54.022Z ERROR [api-gateway] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-09T18:52:32.740Z ERROR [scheduler] Configuration validation failed: required key 'database.url' not found in /etc/scheduler/config.yaml,config_error
+2026-03-14T04:00:53.257Z WARN  [billing-service] Swap usage high: 94% used (5GB/4GB) host=k8s-worker-3c,resource_exhaustion
+"2026-03-11T14:27:17.466Z ERROR [inventory-service] Init container failed: exit code 1 container=db-migration pod=auth-service-5d4e3f-qr7ws reason=""migration failed""",deployment_issue
+2026-03-13T02:15:14.390Z INFO  [billing-service] Successfully processed request request_id=c4ea6d22e8c7 duration=37ms,normal
+2026-03-14T15:09:15.211Z INFO  [cache-manager] Worker thread started thread_id=38 pool_size=16,normal
+2026-03-12T11:33:45.113Z INFO  [user-service] Message consumed topic=orders partition=5 offset=576743 lag=0,normal
+2026-03-16T01:18:49.307Z DEBUG [billing-service] TLS handshake completed peer=prod-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-14T10:52:26.131Z WARN  [event-bus] Rollout stalled: deployment/event-bus 2/5 replicas available deadline=600s namespace=staging,deployment_issue
+2026-03-15T09:26:13.181Z ERROR [analytics-service] Unhandled exception in request handler: NullPointerException at com.analytics-service.handler.process(Handler.java:142) request_id=aab992f54eb9,error_rate
+2026-03-12T12:37:29.624Z FATAL [worker-pool] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-02,config_error
+2026-03-10T00:27:11.971Z ERROR [cdn-proxy] Redis READONLY: You can't write against a read only replica host=elasticsearch-cluster command=SET,dependency_failure
+2026-03-11T05:00:42.185Z INFO  [cdn-proxy] Message consumed topic=orders partition=8 offset=298884 lag=0,normal
+"2026-03-13T18:21:04.041Z ERROR [billing-service] Response validation failed: expected 200, got 403 body=""{\""error\"":\""service degraded\""}"" request_id=c8348d0a115b",error_rate
+2026-03-11T13:06:42.892Z INFO  [search-service] Session created user_id=55abf6d8fd4b ip=10.61.193.121 ttl=3600s,normal
+2026-03-13T00:27:36.904Z ERROR [auth-service] Node scheduling failed: 0/6 nodes available: insufficient cpu pod=worker-pool-6e5f4g-vw8xy,deployment_issue
+"2026-03-10T10:10:31.940Z ERROR [cdn-proxy] GET /metrics failed status=400 error=""Internal Server Error"" request_id=06647bd62ee6",error_rate
+2026-03-11T15:19:47.719Z INFO  [cache-manager] Message consumed topic=orders partition=10 offset=222108 lag=0,normal
+2026-03-16T09:21:09.744Z INFO  [billing-service] Metrics exported datapoints=114 target=prometheus,normal
+2026-03-11T12:21:19.822Z ERROR [analytics-service] ENOMEM: mmap failed size=2407MB host=prod-node-01 available_memory=74MB,resource_exhaustion
+2026-03-10T02:36:04.424Z WARN  [event-bus] Upstream aws-sqs responding slowly: p99=10607ms p50=1067ms threshold=1000ms,dependency_failure
+2026-03-11T11:35:07.853Z WARN  [analytics-service] Circuit breaker half-open for datadog-agent testing with 1 request after 30s cooldown,dependency_failure
+2026-03-15T08:10:20.355Z INFO  [order-service] Session created user_id=556e2754b786 ip=10.212.3.159 ttl=3600s,normal
+2026-03-12T21:23:33.449Z INFO  [auth-service] Scheduled job cron.cleanup completed in 222ms removed=5 records,normal
+2026-03-13T07:22:08.298Z WARN  [order-service] Blue-green switch aborted: new version health check failed endpoint=/readyz host=k8s-worker-2b,deployment_issue
+"2026-03-16T06:35:46.864Z ERROR [analytics-service] Response validation failed: expected 200, got 500 body=""{\""error\"":\""service degraded\""}"" request_id=98b28104aabf",error_rate
+"2026-03-11T14:49:24.019Z ERROR [auth-service] Helm release failed: upgrade ""auth-service"" failed: timed out waiting for the condition namespace=default",deployment_issue
+2026-03-13T12:17:18.378Z INFO  [api-gateway] Worker thread started thread_id=41 pool_size=16,normal
+"2026-03-15T09:27:34.087Z ERROR [event-bus] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-10T23:17:52.042Z ERROR [cdn-proxy] Unhandled exception in request handler: NullPointerException at com.cdn-proxy.handler.process(Handler.java:142) request_id=bf106dcdc5c0,error_rate
+2026-03-10T09:38:07.681Z DEBUG [api-gateway] Connection pool stats: active=5 idle=15 total=20 host=staging-node-01,normal
+2026-03-12T14:16:48.133Z ERROR [auth-service] S3 GetObject failed: bucket=prod-assets key=config/auth-service.yaml error=NoSuchBucket request_id=6b469e7cff1b,dependency_failure
+2026-03-12T08:37:46.041Z ERROR [api-gateway] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+2026-03-12T04:58:09.497Z INFO  [api-gateway] Worker thread started thread_id=62 pool_size=16,normal
+2026-03-10T22:20:31.305Z WARN  [cdn-proxy] Swap usage high: 76% used (3GB/8GB) host=prod-node-03,resource_exhaustion
+2026-03-09T18:55:49.020Z INFO  [event-bus] Rate limiter token_bucket refilled bucket=event-bus tokens=100 interval=60s,normal
+2026-03-11T19:50:24.899Z WARN  [payment-service] Thread pool saturated: active=105/200 queue=630 rejected=14,resource_exhaustion
+2026-03-16T08:42:15.440Z WARN  [worker-pool] Rollout stalled: deployment/worker-pool 2/5 replicas available deadline=600s namespace=monitoring,deployment_issue
+2026-03-16T01:18:55.466Z FATAL [payment-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=243,error_rate
+2026-03-17T05:28:09.270Z INFO  [cdn-proxy] Graceful shutdown initiated pid=43033 signal=SIGTERM,normal
+2026-03-14T16:23:50.784Z ERROR [notification-service] Circuit breaker OPEN for /api/v1/auth/login failures=23/25 window=30s,error_rate
+2026-03-12T11:08:29.994Z ERROR [order-service] Kafka broker unreachable: broker_id=3 host=kafka-3.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-13T14:45:09.555Z DEBUG [event-bus] Connection pool stats: active=5 idle=15 total=20 host=prod-node-02,normal
+2026-03-11T01:54:15.557Z WARN  [event-bus] Upstream sendgrid-email responding slowly: p99=11981ms p50=1853ms threshold=1000ms,dependency_failure
+2026-03-12T10:16:36.466Z ERROR [order-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=api-gateway-7f8b6c-xk9mz consecutive_failures=3,deployment_issue
+2026-03-15T01:15:21.409Z INFO  [user-service] Metrics exported datapoints=228 target=prometheus,normal
+2026-03-10T04:46:37.651Z ERROR [auth-service] Connection pool exhausted: active=97/100 waiting=31 timeout=5000ms db=mongodb-analytics,resource_exhaustion
+2026-03-15T15:23:29.521Z INFO  [scheduler] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-11T16:23:02.774Z INFO  [auth-service] Metrics exported datapoints=152 target=prometheus,normal
+"2026-03-13T06:37:48.320Z ERROR [inventory-service] ConfigMap inventory-service-config not found in namespace production, using defaults",config_error
+2026-03-17T00:35:29.483Z INFO  [search-service] Rate limiter token_bucket refilled bucket=search-service tokens=100 interval=60s,normal
+2026-03-16T05:48:12.695Z ERROR [cache-manager] OOMKilled container=cache-manager pod=payment-service-9a8b7c-lm2np namespace=default memory_limit=512Mi usage=511Mi,resource_exhaustion
+"2026-03-14T20:17:32.357Z FATAL [user-service] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-10T13:47:07.412Z INFO  [search-service] Successfully processed request request_id=7dd076804fa7 duration=69ms,normal
+2026-03-16T12:48:57.428Z ERROR [user-service] Too many open files: ulimit=3620 current=2009 host=prod-node-01,resource_exhaustion
+2026-03-14T15:54:32.253Z ERROR [worker-pool] CrashLoopBackOff pod=auth-service-5d4e3f-qr7ws namespace=monitoring restart_count=9 back_off=5m,deployment_issue
+2026-03-13T14:13:41.078Z ERROR [order-service] PersistentVolumeClaim order-service-data pending: no persistent volumes available for this claim namespace=production,deployment_issue
+2026-03-15T06:11:15.127Z FATAL [cdn-proxy] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=315,error_rate
+2026-03-17T10:01:35.576Z ERROR [worker-pool] DNS resolution failed for aws-s3.internal: NXDOMAIN query_time=3549ms,dependency_failure
+2026-03-11T22:33:00.180Z WARN  [notification-service] Upstream cloudflare-dns responding slowly: p99=11670ms p50=762ms threshold=1000ms,dependency_failure
+2026-03-12T12:56:10.399Z INFO  [payment-service] POST /healthz completed status=201 latency=261ms request_id=838f1dc572fe,normal
+"2026-03-14T21:31:27.600Z ERROR [billing-service] ImagePullBackOff: failed to pull image registry.internal/billing-service:v4.16.36 error=""manifest unknown""",deployment_issue
+2026-03-16T08:28:09.076Z ERROR [worker-pool] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+2026-03-11T22:56:09.734Z INFO  [scheduler] Successfully processed request request_id=e0e315b12e07 duration=345ms,normal
+2026-03-15T01:47:19.994Z ERROR [billing-service] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-03,resource_exhaustion
+2026-03-11T15:49:40.885Z ERROR [inventory-service] Kafka broker unreachable: broker_id=0 host=kafka-1.internal:9092 errno=ETIMEDOUT,dependency_failure
+"2026-03-14T05:07:25.735Z ERROR [scheduler] Vault sealed: unable to retrieve secret secret/scheduler/db-creds error=""Vault is sealed""",dependency_failure
+"2026-03-11T18:28:41.123Z ERROR [worker-pool] MongoDB replica set election in progress: mysql-orders error=""not primary"" retrying in 1s",dependency_failure
+2026-03-09T19:37:23.499Z FATAL [cdn-proxy] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-3c,config_error
+"2026-03-14T10:53:53.315Z WARN  [scheduler] Consul health check failing for aws-sqs: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-11T08:32:28.799Z ERROR [cdn-proxy] Too many open files: ulimit=2131 current=1026 host=k8s-worker-2b,resource_exhaustion
+"2026-03-09T23:01:09.947Z ERROR [search-service] Vault sealed: unable to retrieve secret secret/search-service/db-creds error=""Vault is sealed""",dependency_failure
+"2026-03-14T08:18:59.796Z ERROR [analytics-service] MongoDB replica set election in progress: mongodb-analytics error=""not primary"" retrying in 4s",dependency_failure
+"2026-03-15T19:18:30.417Z ERROR [cdn-proxy] MongoDB replica set election in progress: elasticsearch-cluster error=""not primary"" retrying in 9s",dependency_failure
+2026-03-15T12:22:36.444Z ERROR [event-bus] HTTP 503 Service Unavailable upstream=aws-sqs retries=3/3 request_id=3de7a306a1cb,error_rate
+2026-03-16T08:46:03.905Z DEBUG [api-gateway] DNS resolution host=prod-node-01 resolved_in=6ms ttl=115s,normal
+2026-03-09T18:43:05.629Z INFO  [payment-service] GET /api/v1/auth/login completed status=304 latency=314ms request_id=e93b240e37ea,normal
+2026-03-15T11:46:59.982Z ERROR [order-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-13T06:20:47.768Z ERROR [notification-service] ENOMEM: mmap failed size=4087MB host=k8s-worker-3c available_memory=63MB,resource_exhaustion
+"2026-03-14T06:15:16.848Z WARN  [worker-pool] Canary deployment worker-pool-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-14T21:06:39.474Z FATAL [scheduler] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-3c,config_error
+2026-03-11T18:41:46.322Z ERROR [auth-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-10T12:13:25.298Z INFO  [worker-pool] Cache hit ratio=0.92 keys=4743 host=k8s-worker-1a,normal
+2026-03-17T06:43:35.101Z ERROR [scheduler] 500 errors spiking: count=282 window=5m baseline=5,error_rate
+2026-03-11T01:41:35.034Z ERROR [billing-service] Too many open files: ulimit=1777 current=3584 host=prod-node-03,resource_exhaustion
+"2026-03-15T04:56:05.109Z ERROR [analytics-service] ImagePullBackOff: failed to pull image registry.internal/analytics-service:v3.10.3 error=""manifest unknown""",deployment_issue
+2026-03-16T07:53:15.719Z ERROR [notification-service] S3 GetObject failed: bucket=prod-assets key=config/notification-service.yaml error=NoSuchBucket request_id=30dfb5dba85d,dependency_failure
+2026-03-12T11:40:57.262Z ERROR [api-gateway] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-10T06:17:43.560Z INFO  [notification-service] Successfully processed request request_id=22c59aca567b duration=289ms,normal
+2026-03-17T00:13:07.770Z ERROR [user-service] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+"2026-03-13T23:13:00.080Z ERROR [user-service] Helm release failed: upgrade ""user-service"" failed: timed out waiting for the condition namespace=staging",deployment_issue
+2026-03-16T08:47:34.470Z ERROR [user-service] Circuit breaker OPEN for /api/v1/payments failures=23/25 window=30s,error_rate
+2026-03-16T06:58:18.020Z INFO  [order-service] Message consumed topic=orders partition=7 offset=819088 lag=0,normal
+2026-03-15T00:57:04.018Z FATAL [order-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=9,error_rate
+2026-03-16T04:57:58.869Z ERROR [event-bus] Evicted pod=payment-service-9a8b7c-lm2np namespace=staging reason=The node was low on resource: memory,resource_exhaustion
+2026-03-10T20:22:38.826Z ERROR [billing-service] ENOMEM: mmap failed size=2634MB host=k8s-worker-1a available_memory=44MB,resource_exhaustion
+2026-03-16T11:36:38.555Z DEBUG [analytics-service] DNS resolution host=prod-node-03 resolved_in=7ms ttl=38s,normal
+2026-03-13T12:50:52.209Z DEBUG [cache-manager] TLS handshake completed peer=staging-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-13T05:11:36.537Z ERROR [event-bus] Connection pool exhausted: active=98/100 waiting=40 timeout=5000ms db=redis-cache-01,resource_exhaustion
+"2026-03-15T00:56:54.915Z ERROR [cdn-proxy] Init container failed: exit code 1 container=db-migration pod=auth-service-5d4e3f-qr7ws reason=""migration failed""",deployment_issue
+"2026-03-16T00:08:31.937Z WARN  [api-gateway] Consul health check failing for vault-server: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-13T19:04:21.806Z ERROR [user-service] Secret mount failed: /var/run/secrets/user-service/api-key: no such file or directory,config_error
+2026-03-10T01:10:31.228Z WARN  [cdn-proxy] Swap usage high: 95% used (7GB/7GB) host=prod-node-01,resource_exhaustion
+2026-03-16T15:13:24.401Z WARN  [payment-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/readyz,error_rate
+2026-03-13T23:13:46.995Z ERROR [event-bus] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+"2026-03-11T00:44:42.459Z ERROR [search-service] Traceback (most recent call last):\n  File ""/app/search-service/views.py"", line 268, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-11T19:41:20.261Z ERROR [worker-pool] Unhandled exception in request handler: NullPointerException at com.worker-pool.handler.process(Handler.java:142) request_id=44c370b6bd9c,error_rate
+2026-03-10T08:04:43.005Z WARN  [inventory-service] Thread pool saturated: active=155/200 queue=771 rejected=37,resource_exhaustion
+2026-03-13T01:49:56.343Z WARN  [event-bus] Circuit breaker half-open for aws-sqs testing with 1 request after 30s cooldown,dependency_failure
+2026-03-15T12:55:42.826Z ERROR [cache-manager] S3 GetObject failed: bucket=prod-assets key=config/cache-manager.yaml error=NoSuchBucket request_id=4b94fa32394f,dependency_failure
+2026-03-12T18:23:59.562Z INFO  [api-gateway] Successfully processed request request_id=414d99f451a0 duration=259ms,normal
+"2026-03-10T20:01:26.958Z ERROR [cache-manager] MongoDB replica set election in progress: elasticsearch-cluster error=""not primary"" retrying in 8s",dependency_failure
+"2026-03-12T11:14:31.604Z ERROR [event-bus] Helm release failed: upgrade ""event-bus"" failed: timed out waiting for the condition namespace=kube-system",deployment_issue
+2026-03-17T10:37:00.002Z INFO  [inventory-service] Message consumed topic=orders partition=5 offset=50468 lag=0,normal
+2026-03-15T10:50:04.610Z ERROR [cache-manager] Too many open files: ulimit=2118 current=1649 host=k8s-worker-1a,resource_exhaustion
+2026-03-11T03:58:09.198Z ERROR [inventory-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-16T05:23:12.715Z ERROR [order-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=payment-service-9a8b7c-lm2np consecutive_failures=3,deployment_issue
+2026-03-10T22:28:51.223Z WARN  [worker-pool] File descriptor leak detected: open_fds=3617 baseline=159 host=prod-node-01,resource_exhaustion
+"2026-03-11T23:21:22.462Z ERROR [worker-pool] Invalid configuration: max_connections must be > 0, got -1 source=/etc/worker-pool/config.yaml",config_error
+"2026-03-10T21:05:10.604Z ERROR [user-service] ImagePullBackOff: failed to pull image registry.internal/user-service:v5.0.60 error=""manifest unknown""",deployment_issue
+2026-03-17T00:20:43.042Z ERROR [billing-service] Too many open files: ulimit=2407 current=3475 host=k8s-worker-3c,resource_exhaustion
+2026-03-14T12:01:33.387Z INFO  [inventory-service] Message consumed topic=orders partition=6 offset=748898 lag=0,normal
+2026-03-10T11:07:19.310Z ERROR [payment-service] ENOMEM: mmap failed size=3768MB host=prod-node-02 available_memory=52MB,resource_exhaustion
+2026-03-13T16:20:50.420Z ERROR [billing-service] Helm values override conflict: both 'replicas' and 'autoscaling.enabled' are set,config_error
+"2026-03-14T19:02:40.994Z ERROR [cdn-proxy] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/cdn-proxy.Service/Process",error_rate
+2026-03-16T08:26:49.401Z ERROR [order-service] S3 GetObject failed: bucket=prod-assets key=config/order-service.yaml error=NoSuchBucket request_id=3820dabec8ad,dependency_failure
+"2026-03-11T06:32:13.736Z ERROR [notification-service] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=9efe18cc507f",error_rate
+"2026-03-10T05:01:04.597Z WARN  [order-service] TLS certificate path /etc/ssl/order-service/tls.crt does not exist, disabling TLS",config_error
+"2026-03-15T01:54:26.847Z ERROR [search-service] Invalid configuration: max_connections must be > 0, got -1 source=/etc/search-service/config.yaml",config_error
+2026-03-17T13:06:44.410Z ERROR [analytics-service] Evicted pod=order-service-3c2d1e-jk5gh namespace=production reason=The node was low on resource: memory,resource_exhaustion
+2026-03-14T16:05:44.033Z WARN  [order-service] Swap usage high: 94% used (4GB/7GB) host=prod-node-02,resource_exhaustion
+"2026-03-10T21:43:15.292Z ERROR [worker-pool] Invalid configuration: max_connections must be > 0, got -1 source=/etc/worker-pool/config.yaml",config_error
+"2026-03-16T14:41:20.128Z ERROR [cdn-proxy] Traceback (most recent call last):\n  File ""/app/cdn-proxy/views.py"", line 292, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+"2026-03-14T12:41:37.653Z ERROR [api-gateway] Response validation failed: expected 200, got 503 body=""{\""error\"":\""service degraded\""}"" request_id=510f9de78708",error_rate
+"2026-03-15T14:57:20.622Z ERROR [cache-manager] POST /api/v1/inventory failed status=504 error=""Internal Server Error"" request_id=bc898e22d222",error_rate
+"2026-03-10T12:34:10.724Z WARN  [api-gateway] Consul health check failing for sendgrid-email: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-15T07:06:56.643Z INFO  [event-bus] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-10T02:21:53.213Z ERROR [billing-service] Connection pool exhausted: active=95/100 waiting=42 timeout=5000ms db=postgres-replica-1,resource_exhaustion
+2026-03-15T05:29:26.053Z ERROR [inventory-service] HTTP 503 Service Unavailable upstream=aws-sqs retries=3/3 request_id=29d74119ea6c,error_rate
+"2026-03-13T17:50:49.520Z ERROR [inventory-service] gRPC connection to aws-sqs failed: code=UNAVAILABLE desc=""dns resolution failed for aws-sqs.svc.cluster.local""",dependency_failure
+2026-03-12T01:43:55.821Z FATAL [worker-pool] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-2b pid=2954,resource_exhaustion
+2026-03-16T06:01:30.662Z ERROR [search-service] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-16T06:48:31.791Z ERROR [payment-service] Unhandled exception in request handler: NullPointerException at com.payment-service.handler.process(Handler.java:142) request_id=5940083ba7c8,error_rate
+2026-03-10T18:46:48.811Z ERROR [auth-service] OOMKilled container=auth-service pod=worker-pool-6e5f4g-vw8xy namespace=monitoring memory_limit=512Mi usage=511Mi,resource_exhaustion
+2026-03-09T16:29:04.606Z ERROR [analytics-service] Too many open files: ulimit=2757 current=2001 host=k8s-worker-1a,resource_exhaustion
+2026-03-10T14:32:49.946Z INFO  [billing-service] Successfully processed request request_id=9287ff13dcd1 duration=275ms,normal
+2026-03-15T21:22:50.477Z INFO  [analytics-service] Deployment readiness probe succeeded pod=payment-service-9a8b7c-lm2np namespace=default,normal
+2026-03-16T22:06:37.698Z WARN  [inventory-service] Thread pool saturated: active=124/200 queue=781 rejected=7,resource_exhaustion
+"2026-03-15T09:11:39.786Z ERROR [notification-service] Vault sealed: unable to retrieve secret secret/notification-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-16T14:27:31.198Z ERROR [auth-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+"2026-03-09T19:52:36.898Z ERROR [scheduler] Traceback (most recent call last):\n  File ""/app/scheduler/views.py"", line 209, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-12T00:43:51.063Z ERROR [worker-pool] 500 errors spiking: count=500 window=5m baseline=6,error_rate
+2026-03-10T04:01:42.905Z ERROR [cdn-proxy] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+2026-03-16T10:57:43.303Z WARN  [payment-service] Swap usage high: 84% used (4GB/6GB) host=prod-node-02,resource_exhaustion
+"2026-03-14T05:11:11.824Z ERROR [cache-manager] Vault sealed: unable to retrieve secret secret/cache-manager/db-creds error=""Vault is sealed""",dependency_failure
+"2026-03-12T22:53:14.367Z FATAL [cache-manager] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-14T20:58:54.676Z ERROR [search-service] Unhandled exception in request handler: NullPointerException at com.search-service.handler.process(Handler.java:142) request_id=001a728bd3b3,error_rate
+"2026-03-14T03:54:25.126Z ERROR [search-service] MongoDB replica set election in progress: postgres-primary error=""not primary"" retrying in 7s",dependency_failure
+"2026-03-10T11:39:42.357Z WARN  [payment-service] Consul health check failing for consul-cluster: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-17T10:13:23.023Z WARN  [user-service] Canary deployment user-service-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-16T13:16:40.038Z ERROR [cache-manager] ENOMEM: mmap failed size=3579MB host=k8s-worker-3c available_memory=71MB,resource_exhaustion
+"2026-03-17T00:48:36.820Z ERROR [user-service] MongoDB replica set election in progress: mongodb-analytics error=""not primary"" retrying in 10s",dependency_failure
+2026-03-16T19:59:23.698Z ERROR [cdn-proxy] Redis READONLY: You can't write against a read only replica host=redis-cache-02 command=SET,dependency_failure
+2026-03-12T02:20:40.978Z WARN  [search-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/metrics,error_rate
+2026-03-16T01:55:57.303Z FATAL [search-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=staging-node-01 pid=36021,resource_exhaustion
+2026-03-12T02:51:41.988Z ERROR [worker-pool] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+"2026-03-09T23:26:39.945Z WARN  [api-gateway] Consul health check failing for vault-server: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-15T05:03:48.755Z ERROR [user-service] Connection refused to mongodb-analytics host=10.0.49.175:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-11T12:47:20.310Z ERROR [cdn-proxy] PersistentVolumeClaim cdn-proxy-data pending: no persistent volumes available for this claim namespace=production,deployment_issue
+2026-03-15T14:48:05.040Z DEBUG [user-service] TLS handshake completed peer=staging-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-15T16:23:39.188Z WARN  [user-service] CPU throttling detected: 63% throttled periods pod=worker-pool-6e5f4g-vw8xy cpu_limit=500m,resource_exhaustion
+"2026-03-12T08:12:12.039Z ERROR [api-gateway] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/api-gateway.Service/Process",error_rate
+2026-03-15T01:28:27.415Z ERROR [scheduler] Connection refused to redis-cache-02 host=10.0.50.222:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-11T20:45:41.515Z WARN  [cache-manager] Thread pool saturated: active=174/200 queue=214 rejected=15,resource_exhaustion
+"2026-03-11T04:17:12.951Z ERROR [event-bus] Helm release failed: upgrade ""event-bus"" failed: timed out waiting for the condition namespace=kube-system",deployment_issue
+2026-03-15T04:17:22.645Z ERROR [event-bus] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-09T14:41:20.770Z INFO  [billing-service] Graceful shutdown initiated pid=27085 signal=SIGTERM,normal
+2026-03-16T17:33:04.351Z INFO  [inventory-service] POST /readyz completed status=201 latency=73ms request_id=71b5cb35da51,normal
+2026-03-10T09:17:25.283Z WARN  [payment-service] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=k8s-worker-2b,resource_exhaustion
+2026-03-17T05:08:30.832Z INFO  [cache-manager] DELETE /healthz completed status=200 latency=216ms request_id=014c03bbcf45,normal
+"2026-03-14T08:55:37.418Z ERROR [cdn-proxy] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/cdn-proxy.Service/Process",error_rate
+2026-03-10T11:09:14.653Z ERROR [search-service] Circuit breaker OPEN for /metrics failures=23/25 window=30s,error_rate
+2026-03-14T20:27:38.241Z INFO  [cache-manager] Graceful shutdown initiated pid=32719 signal=SIGTERM,normal
+"2026-03-13T19:43:28.154Z ERROR [cache-manager] Init container failed: exit code 1 container=db-migration pod=auth-service-5d4e3f-qr7ws reason=""migration failed""",deployment_issue
+2026-03-10T06:49:35.823Z WARN  [event-bus] Circuit breaker half-open for aws-sqs testing with 1 request after 30s cooldown,dependency_failure
+2026-03-12T07:28:47.211Z ERROR [event-bus] Node scheduling failed: 0/10 nodes available: insufficient cpu pod=payment-service-9a8b7c-lm2np,deployment_issue
+2026-03-15T01:06:01.216Z ERROR [cdn-proxy] S3 GetObject failed: bucket=prod-assets key=config/cdn-proxy.yaml error=NoSuchBucket request_id=862023413fb9,dependency_failure
+"2026-03-14T10:33:09.281Z ERROR [analytics-service] MongoDB replica set election in progress: mongodb-analytics error=""not primary"" retrying in 9s",dependency_failure
+2026-03-16T10:01:55.528Z INFO  [user-service] Metrics exported datapoints=198 target=prometheus,normal
+"2026-03-10T23:58:05.298Z WARN  [billing-service] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+"2026-03-10T04:34:30.449Z FATAL [worker-pool] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-09T14:55:09.915Z ERROR [analytics-service] CrashLoopBackOff pod=auth-service-5d4e3f-qr7ws namespace=kube-system restart_count=17 back_off=5m,deployment_issue
+2026-03-14T12:38:29.923Z ERROR [order-service] Secret mount failed: /var/run/secrets/order-service/api-key: no such file or directory,config_error
+2026-03-12T02:49:21.858Z WARN  [inventory-service] Swap usage high: 78% used (6GB/7GB) host=prod-node-02,resource_exhaustion
+"2026-03-15T04:32:01.524Z ERROR [user-service] MongoDB replica set election in progress: postgres-primary error=""not primary"" retrying in 10s",dependency_failure
+2026-03-10T10:39:20.685Z ERROR [user-service] OOMKilled container=user-service pod=auth-service-5d4e3f-qr7ws namespace=kube-system memory_limit=512Mi usage=511Mi,resource_exhaustion
+"2026-03-13T00:23:59.641Z ERROR [user-service] Invalid configuration: max_connections must be > 0, got -1 source=/etc/user-service/config.yaml",config_error
+2026-03-13T13:57:04.147Z ERROR [worker-pool] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-15T20:30:05.814Z INFO  [auth-service] PUT /api/v2/search completed status=304 latency=263ms request_id=4686ca4187ae,normal
+2026-03-10T19:18:03.783Z DEBUG [notification-service] TLS handshake completed peer=k8s-worker-1a:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-11T05:37:10.055Z ERROR [billing-service] 500 errors spiking: count=445 window=5m baseline=9,error_rate
+2026-03-15T19:14:05.241Z WARN  [auth-service] Rolling update paused: maxUnavailable reached deployment/auth-service unavailable=4,deployment_issue
+2026-03-15T14:57:32.395Z WARN  [auth-service] Blue-green switch aborted: new version health check failed endpoint=/readyz host=prod-node-01,deployment_issue
+2026-03-13T17:54:57.499Z ERROR [worker-pool] Schema migration version mismatch: expected=42 got=39 database=postgres-replica-1,config_error
+2026-03-11T08:18:27.050Z ERROR [payment-service] Too many open files: ulimit=1113 current=2269 host=k8s-worker-2b,resource_exhaustion
+"2026-03-16T17:06:48.083Z ERROR [billing-service] Vault sealed: unable to retrieve secret secret/billing-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-14T08:39:31.789Z WARN  [auth-service] Upstream consul-cluster responding slowly: p99=3318ms p50=597ms threshold=1000ms,dependency_failure
+"2026-03-14T11:08:36.639Z ERROR [user-service] ImagePullBackOff: failed to pull image registry.internal/user-service:v5.26.75 error=""manifest unknown""",deployment_issue
+2026-03-15T01:51:59.691Z FATAL [cdn-proxy] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-1a pid=41860,resource_exhaustion
+"2026-03-10T18:56:42.097Z ERROR [scheduler] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/scheduler.Service/Process",error_rate
+2026-03-11T09:04:30.086Z INFO  [analytics-service] Deployment readiness probe succeeded pod=worker-pool-6e5f4g-vw8xy namespace=default,normal
+2026-03-10T07:36:09.496Z ERROR [order-service] PersistentVolumeClaim order-service-data pending: no persistent volumes available for this claim namespace=staging,deployment_issue
+2026-03-14T11:29:09.186Z ERROR [cdn-proxy] Circuit breaker OPEN for /api/v1/notifications failures=23/25 window=30s,error_rate
+2026-03-14T07:30:04.139Z INFO  [worker-pool] PUT /readyz completed status=200 latency=40ms request_id=56e378b201d4,normal
+2026-03-13T22:23:01.010Z INFO  [payment-service] Graceful shutdown initiated pid=30192 signal=SIGTERM,normal
+2026-03-12T19:11:05.326Z INFO  [notification-service] Metrics exported datapoints=55 target=prometheus,normal
+2026-03-16T05:39:53.421Z WARN  [cache-manager] Upstream aws-sqs responding slowly: p99=13116ms p50=575ms threshold=1000ms,dependency_failure
+2026-03-17T10:09:52.494Z WARN  [auth-service] Rollout stalled: deployment/auth-service 2/5 replicas available deadline=600s namespace=monitoring,deployment_issue
+2026-03-13T16:04:50.664Z ERROR [notification-service] Request timeout after 30000ms PATCH /api/v1/auth/refresh request_id=17eb481d191e,error_rate
+"2026-03-13T07:14:32.060Z ERROR [search-service] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=3827e839d80b",error_rate
+2026-03-16T17:20:02.282Z INFO  [payment-service] Graceful shutdown initiated pid=5900 signal=SIGTERM,normal
+"2026-03-10T15:50:38.736Z ERROR [worker-pool] Response validation failed: expected 200, got 400 body=""{\""error\"":\""service degraded\""}"" request_id=1d95824a3db5",error_rate
+2026-03-14T07:22:51.248Z ERROR [user-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=order-service-3c2d1e-jk5gh consecutive_failures=3,deployment_issue
+2026-03-10T02:48:53.670Z ERROR [notification-service] ENOMEM: mmap failed size=2762MB host=k8s-worker-1a available_memory=34MB,resource_exhaustion
+2026-03-13T13:41:52.684Z ERROR [scheduler] Redis READONLY: You can't write against a read only replica host=postgres-primary command=SET,dependency_failure
+2026-03-09T17:29:30.528Z DEBUG [payment-service] Connection pool stats: active=5 idle=15 total=20 host=k8s-worker-1a,normal
+2026-03-15T11:09:32.191Z DEBUG [event-bus] TLS handshake completed peer=k8s-worker-3c:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-10T16:44:14.180Z ERROR [billing-service] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-11T23:20:40.958Z WARN  [analytics-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/users,error_rate
+2026-03-12T05:43:53.862Z INFO  [auth-service] Rate limiter token_bucket refilled bucket=auth-service tokens=100 interval=60s,normal
+2026-03-15T20:35:35.395Z FATAL [search-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-3c,config_error
+2026-03-17T08:56:45.839Z ERROR [event-bus] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-16T08:41:39.423Z ERROR [auth-service] Request timeout after 30000ms PUT /api/v1/auth/refresh request_id=ddf88ea3c615,error_rate
+2026-03-16T01:45:12.417Z WARN  [notification-service] Circuit breaker half-open for vault-server testing with 1 request after 30s cooldown,dependency_failure
+"2026-03-17T05:15:56.440Z WARN  [worker-pool] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-16T20:14:26.470Z ERROR [cdn-proxy] CrashLoopBackOff pod=order-service-3c2d1e-jk5gh namespace=kube-system restart_count=19 back_off=5m,deployment_issue
+2026-03-16T08:03:36.167Z ERROR [cache-manager] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+"2026-03-09T20:24:53.082Z ERROR [event-bus] MongoDB replica set election in progress: postgres-replica-1 error=""not primary"" retrying in 10s",dependency_failure
+2026-03-15T04:48:36.178Z FATAL [api-gateway] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=130,error_rate
+2026-03-17T10:51:56.383Z INFO  [search-service] Worker thread started thread_id=55 pool_size=16,normal
+2026-03-10T21:26:58.425Z FATAL [payment-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-01,config_error
+2026-03-11T00:10:52.235Z ERROR [auth-service] Request timeout after 30000ms PATCH /api/v1/payments request_id=cda918ccfc98,error_rate
+2026-03-17T10:18:30.097Z ERROR [cache-manager] Request timeout after 30000ms PUT /metrics request_id=42f0411535a0,error_rate
+2026-03-15T11:26:34.816Z ERROR [scheduler] Connection refused to mongodb-analytics host=10.0.25.97:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-16T01:21:01.543Z DEBUG [analytics-service] Connection pool stats: active=5 idle=15 total=20 host=k8s-worker-1a,normal
+2026-03-09T17:51:49.091Z INFO  [cache-manager] Rate limiter token_bucket refilled bucket=cache-manager tokens=100 interval=60s,normal
+2026-03-10T12:38:52.837Z DEBUG [order-service] Connection pool stats: active=5 idle=15 total=20 host=staging-node-01,normal
+2026-03-14T22:47:35.062Z ERROR [api-gateway] Kafka broker unreachable: broker_id=3 host=kafka-2.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-11T14:52:03.110Z INFO  [payment-service] Cache hit ratio=0.97 keys=1097 host=prod-node-01,normal
+"2026-03-13T04:09:59.640Z ERROR [auth-service] TLS handshake failed: datadog-agent:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-11T04:34:21.164Z INFO  [api-gateway] Deployment readiness probe succeeded pod=order-service-3c2d1e-jk5gh namespace=default,normal
+"2026-03-11T13:23:37.508Z ERROR [event-bus] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=7660bc5896b1",error_rate
+2026-03-13T11:41:41.275Z ERROR [notification-service] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-11T16:56:01.404Z WARN  [user-service] CPU throttling detected: 77% throttled periods pod=worker-pool-6e5f4g-vw8xy cpu_limit=500m,resource_exhaustion
+2026-03-09T19:04:33.273Z INFO  [worker-pool] Deployment readiness probe succeeded pod=api-gateway-7f8b6c-xk9mz namespace=default,normal
+2026-03-09T23:58:36.791Z ERROR [billing-service] 500 errors spiking: count=111 window=5m baseline=8,error_rate
+2026-03-12T22:27:09.755Z ERROR [payment-service] Connection pool exhausted: active=98/100 waiting=45 timeout=5000ms db=elasticsearch-cluster,resource_exhaustion
+"2026-03-11T04:29:55.498Z ERROR [analytics-service] POST /api/v1/notifications failed status=503 error=""Internal Server Error"" request_id=453f2f9facd1",error_rate
+2026-03-13T14:50:05.224Z INFO  [notification-service] Session created user_id=ab34904288de ip=10.34.211.46 ttl=3600s,normal
+"2026-03-12T23:52:13.528Z ERROR [payment-service] Vault sealed: unable to retrieve secret secret/payment-service/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-17T09:11:19.317Z FATAL [billing-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-3c pid=35056,resource_exhaustion
+2026-03-15T23:36:26.559Z ERROR [search-service] Unhandled exception in request handler: NullPointerException at com.search-service.handler.process(Handler.java:142) request_id=8756487a03d4,error_rate
+2026-03-16T16:37:00.560Z ERROR [scheduler] ENOMEM: mmap failed size=2026MB host=k8s-worker-2b available_memory=23MB,resource_exhaustion
+2026-03-10T10:52:30.903Z DEBUG [notification-service] TLS handshake completed peer=prod-node-03:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-11T12:47:09.987Z ERROR [scheduler] 500 errors spiking: count=412 window=5m baseline=8,error_rate
+2026-03-12T11:55:58.924Z INFO  [billing-service] Successfully processed request request_id=ff36ed78cc09 duration=278ms,normal
+2026-03-13T23:42:27.440Z DEBUG [payment-service] DNS resolution host=k8s-worker-1a resolved_in=13ms ttl=129s,normal
+2026-03-11T18:32:20.192Z ERROR [auth-service] CrashLoopBackOff pod=payment-service-9a8b7c-lm2np namespace=monitoring restart_count=8 back_off=5m,deployment_issue
+2026-03-15T21:54:39.867Z ERROR [api-gateway] Evicted pod=api-gateway-7f8b6c-xk9mz namespace=monitoring reason=The node was low on resource: memory,resource_exhaustion
+"2026-03-16T12:01:18.818Z ERROR [analytics-service] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-15T11:03:09.034Z ERROR [auth-service] Evicted pod=order-service-3c2d1e-jk5gh namespace=staging reason=The node was low on resource: memory,resource_exhaustion
+2026-03-11T21:20:15.194Z ERROR [event-bus] ENOMEM: mmap failed size=1036MB host=prod-node-02 available_memory=65MB,resource_exhaustion
+2026-03-14T21:58:14.217Z INFO  [cache-manager] Successfully processed request request_id=7bb0ba81cec1 duration=180ms,normal
+2026-03-16T17:01:55.057Z INFO  [cache-manager] Successfully processed request request_id=16a3394e58ef duration=102ms,normal
+2026-03-15T10:43:04.977Z FATAL [cdn-proxy] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-02,config_error
+2026-03-15T12:41:42.848Z INFO  [notification-service] Graceful shutdown initiated pid=20686 signal=SIGTERM,normal
+2026-03-11T04:49:01.908Z INFO  [payment-service] DELETE /readyz completed status=204 latency=59ms request_id=0a4a08162fb3,normal
+2026-03-15T09:01:45.659Z ERROR [payment-service] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+2026-03-14T18:19:38.798Z ERROR [analytics-service] Secret mount failed: /var/run/secrets/analytics-service/api-key: no such file or directory,config_error
+2026-03-10T01:08:40.507Z DEBUG [billing-service] DNS resolution host=staging-node-01 resolved_in=6ms ttl=296s,normal
+2026-03-15T14:02:23.061Z ERROR [payment-service] Request timeout after 30000ms DELETE /api/v1/auth/login request_id=834dc44fd57b,error_rate
+2026-03-13T14:58:14.440Z WARN  [worker-pool] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-02,resource_exhaustion
+2026-03-16T19:04:37.436Z ERROR [scheduler] Redis READONLY: You can't write against a read only replica host=postgres-replica-1 command=SET,dependency_failure
+"2026-03-13T05:54:12.693Z WARN  [api-gateway] Consul health check failing for datadog-agent: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-14T07:07:52.153Z ERROR [api-gateway] MongoDB replica set election in progress: postgres-replica-1 error=""not primary"" retrying in 9s",dependency_failure
+"2026-03-16T09:56:10.451Z ERROR [cache-manager] Traceback (most recent call last):\n  File ""/app/cache-manager/views.py"", line 195, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+"2026-03-14T05:34:17.083Z WARN  [notification-service] Retry attempt 3/5 for POST /api/v1/auth/login last_error=""connection reset by peer""",error_rate
+2026-03-11T22:44:07.225Z ERROR [notification-service] Node scheduling failed: 0/8 nodes available: insufficient cpu pod=auth-service-5d4e3f-qr7ws,deployment_issue
+"2026-03-16T03:29:42.977Z ERROR [order-service] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-15T11:54:38.546Z ERROR [payment-service] Too many open files: ulimit=1903 current=3196 host=prod-node-02,resource_exhaustion
+"2026-03-16T01:08:06.333Z ERROR [cdn-proxy] TLS handshake failed: datadog-agent:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-14T20:54:15.797Z DEBUG [payment-service] DNS resolution host=k8s-worker-1a resolved_in=14ms ttl=255s,normal
+2026-03-10T15:57:31.738Z INFO  [user-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+"2026-03-14T23:53:44.709Z FATAL [search-service] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-15T08:57:42.741Z INFO  [search-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-14T17:32:16.027Z INFO  [billing-service] Metrics exported datapoints=327 target=prometheus,normal
+"2026-03-09T15:28:37.868Z ERROR [billing-service] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+"2026-03-11T20:28:23.424Z WARN  [analytics-service] Retry attempt 3/5 for GET /api/v1/auth/login last_error=""connection reset by peer""",error_rate
+2026-03-09T20:45:31.442Z WARN  [analytics-service] Rolling update paused: maxUnavailable reached deployment/analytics-service unavailable=3,deployment_issue
+"2026-03-16T03:07:57.856Z WARN  [billing-service] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-11T04:52:17.528Z INFO  [user-service] POST /api/v1/users completed status=201 latency=106ms request_id=5780febdb0f5,normal
+2026-03-13T09:38:37.909Z WARN  [worker-pool] Thread pool saturated: active=137/200 queue=233 rejected=2,resource_exhaustion
+2026-03-14T21:02:57.291Z ERROR [order-service] Kafka broker unreachable: broker_id=3 host=kafka-2.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-16T00:40:26.974Z ERROR [billing-service] Node scheduling failed: 0/7 nodes available: insufficient cpu pod=auth-service-5d4e3f-qr7ws,deployment_issue
+2026-03-15T03:51:06.934Z INFO  [payment-service] Rate limiter token_bucket refilled bucket=payment-service tokens=100 interval=60s,normal
+"2026-03-09T15:33:26.354Z WARN  [inventory-service] Consul health check failing for twilio-sms: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-11T09:29:53.125Z WARN  [billing-service] TLS certificate path /etc/ssl/billing-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-11T16:32:36.904Z ERROR [order-service] Schema migration version mismatch: expected=42 got=39 database=postgres-primary,config_error
+2026-03-11T09:42:33.793Z ERROR [analytics-service] Secret mount failed: /var/run/secrets/analytics-service/api-key: no such file or directory,config_error
+2026-03-12T06:34:19.090Z ERROR [api-gateway] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-02,resource_exhaustion
+2026-03-11T03:38:04.190Z ERROR [inventory-service] Evicted pod=order-service-3c2d1e-jk5gh namespace=default reason=The node was low on resource: memory,resource_exhaustion
+"2026-03-12T06:20:52.946Z ERROR [payment-service] Vault sealed: unable to retrieve secret secret/payment-service/db-creds error=""Vault is sealed""",dependency_failure
+"2026-03-13T19:03:44.886Z ERROR [auth-service] ImagePullBackOff: failed to pull image registry.internal/auth-service:v4.7.93 error=""manifest unknown""",deployment_issue
+2026-03-14T06:25:57.810Z DEBUG [payment-service] DNS resolution host=prod-node-01 resolved_in=3ms ttl=194s,normal
+"2026-03-13T01:11:08.710Z WARN  [cdn-proxy] Retry attempt 3/5 for POST /readyz last_error=""connection reset by peer""",error_rate
+2026-03-13T05:00:39.572Z ERROR [scheduler] Request timeout after 30000ms POST /api/v1/orders request_id=9876b2f99ad7,error_rate
+2026-03-15T15:40:32.781Z ERROR [order-service] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-01,resource_exhaustion
+2026-03-15T13:32:34.501Z ERROR [cache-manager] Evicted pod=payment-service-9a8b7c-lm2np namespace=production reason=The node was low on resource: memory,resource_exhaustion
+2026-03-11T02:42:33.804Z INFO  [search-service] Successfully processed request request_id=881b0b011a2c duration=333ms,normal
+2026-03-12T17:07:12.151Z WARN  [api-gateway] Rolling update paused: maxUnavailable reached deployment/api-gateway unavailable=4,deployment_issue
+2026-03-12T05:49:01.726Z DEBUG [auth-service] DNS resolution host=staging-node-01 resolved_in=7ms ttl=156s,normal
+"2026-03-15T03:32:49.895Z ERROR [cache-manager] ConfigMap cache-manager-config not found in namespace production, using defaults",config_error
+2026-03-11T19:52:56.391Z FATAL [api-gateway] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=160,error_rate
+"2026-03-12T07:59:21.848Z ERROR [cache-manager] Invalid configuration: max_connections must be > 0, got -1 source=/etc/cache-manager/config.yaml",config_error
+2026-03-11T05:17:31.377Z ERROR [cdn-proxy] DNS resolution failed for vault-server.internal: NXDOMAIN query_time=1282ms,dependency_failure
+2026-03-17T12:34:44.223Z ERROR [api-gateway] DNS resolution failed for consul-cluster.internal: NXDOMAIN query_time=2665ms,dependency_failure
+"2026-03-15T01:41:06.868Z WARN  [event-bus] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-09T20:00:56.754Z ERROR [inventory-service] DNS resolution failed for consul-cluster.internal: NXDOMAIN query_time=4293ms,dependency_failure
+2026-03-12T11:34:09.468Z ERROR [search-service] Redis READONLY: You can't write against a read only replica host=elasticsearch-cluster command=SET,dependency_failure
+"2026-03-16T14:43:32.353Z ERROR [cdn-proxy] PUT /api/v1/orders failed status=400 error=""Internal Server Error"" request_id=27ff4ce76325",error_rate
+2026-03-16T00:24:03.568Z DEBUG [worker-pool] Connection pool stats: active=5 idle=15 total=20 host=prod-node-03,normal
+2026-03-10T00:22:29.131Z ERROR [scheduler] ENOMEM: mmap failed size=1570MB host=prod-node-03 available_memory=95MB,resource_exhaustion
+2026-03-15T00:47:33.203Z ERROR [analytics-service] Evicted pod=api-gateway-7f8b6c-xk9mz namespace=default reason=The node was low on resource: memory,resource_exhaustion
+2026-03-10T22:01:31.458Z ERROR [cache-manager] Circuit breaker OPEN for /api/v1/auth/login failures=23/25 window=30s,error_rate
+"2026-03-15T02:22:28.172Z ERROR [cache-manager] ConfigMap cache-manager-config not found in namespace production, using defaults",config_error
+2026-03-14T19:22:37.569Z ERROR [analytics-service] Secret mount failed: /var/run/secrets/analytics-service/api-key: no such file or directory,config_error
+2026-03-15T12:03:02.953Z ERROR [payment-service] Connection refused to redis-cache-02 host=10.0.3.169:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-11T14:07:35.357Z INFO  [payment-service] Rate limiter token_bucket refilled bucket=payment-service tokens=100 interval=60s,normal
+2026-03-15T23:31:01.646Z INFO  [worker-pool] Session created user_id=12cfc2669607 ip=10.182.123.42 ttl=3600s,normal
+"2026-03-15T15:44:15.043Z ERROR [event-bus] Response validation failed: expected 200, got 502 body=""{\""error\"":\""service degraded\""}"" request_id=772d5c9167ad",error_rate
+2026-03-13T08:47:13.120Z ERROR [analytics-service] Request timeout after 30000ms PATCH /healthz request_id=2a82d071a5e4,error_rate
+"2026-03-14T23:32:49.824Z ERROR [order-service] GET /api/v1/users failed status=400 error=""Internal Server Error"" request_id=702c2b2c10d1",error_rate
+2026-03-11T06:38:07.457Z FATAL [payment-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-3c,config_error
+2026-03-13T18:22:16.345Z INFO  [cache-manager] Metrics exported datapoints=200 target=prometheus,normal
+2026-03-10T14:50:07.879Z ERROR [worker-pool] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-01,resource_exhaustion
+2026-03-12T00:29:24.773Z ERROR [api-gateway] Too many open files: ulimit=1893 current=3452 host=staging-node-01,resource_exhaustion
+"2026-03-15T01:54:12.641Z ERROR [analytics-service] Response validation failed: expected 200, got 500 body=""{\""error\"":\""service degraded\""}"" request_id=533df8af14bb",error_rate
+2026-03-15T04:04:26.007Z ERROR [search-service] Circuit breaker OPEN for /api/v1/orders failures=23/25 window=30s,error_rate
+2026-03-10T04:21:13.543Z INFO  [billing-service] Deployment readiness probe succeeded pod=api-gateway-7f8b6c-xk9mz namespace=default,normal
+2026-03-15T08:30:33.872Z ERROR [user-service] Redis READONLY: You can't write against a read only replica host=redis-cache-02 command=SET,dependency_failure
+"2026-03-16T23:02:53.485Z ERROR [scheduler] TLS handshake failed: aws-s3:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-10T11:56:28.926Z WARN  [billing-service] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=staging-node-01,resource_exhaustion
+2026-03-16T14:50:31.614Z WARN  [billing-service] Thread pool saturated: active=176/200 queue=792 rejected=49,resource_exhaustion
+2026-03-14T07:22:47.596Z ERROR [event-bus] Circuit breaker OPEN for /healthz failures=23/25 window=30s,error_rate
+2026-03-16T04:16:22.885Z ERROR [payment-service] ArgoCD sync failed: application payment-service sync status=OutOfSync health=Degraded,deployment_issue
+2026-03-13T03:17:18.928Z WARN  [payment-service] Thread pool saturated: active=166/200 queue=330 rejected=38,resource_exhaustion
+2026-03-13T09:01:34.535Z WARN  [cache-manager] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=k8s-worker-1a,resource_exhaustion
+"2026-03-13T00:40:01.218Z ERROR [payment-service] Response validation failed: expected 200, got 502 body=""{\""error\"":\""service degraded\""}"" request_id=61bb1ab7ee5a",error_rate
+2026-03-11T10:46:48.977Z ERROR [worker-pool] 500 errors spiking: count=111 window=5m baseline=5,error_rate
+2026-03-16T10:02:20.134Z ERROR [worker-pool] Request timeout after 30000ms DELETE /metrics request_id=00a56f79cb32,error_rate
+2026-03-13T21:42:34.003Z WARN  [cache-manager] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-02,resource_exhaustion
+"2026-03-11T20:10:49.679Z ERROR [inventory-service] PATCH /metrics failed status=401 error=""Internal Server Error"" request_id=6f54cdf42ed7",error_rate
+2026-03-16T23:42:55.112Z ERROR [notification-service] Liveness probe failed: HTTP probe failed with statuscode 503 pod=api-gateway-7f8b6c-xk9mz consecutive_failures=3,deployment_issue
+2026-03-13T08:56:28.903Z INFO  [auth-service] Metrics exported datapoints=467 target=prometheus,normal
+2026-03-16T16:19:45.303Z ERROR [billing-service] S3 GetObject failed: bucket=prod-assets key=config/billing-service.yaml error=NoSuchBucket request_id=dcda584140e9,dependency_failure
+2026-03-17T13:12:20.686Z ERROR [cdn-proxy] Node scheduling failed: 0/9 nodes available: insufficient cpu pod=order-service-3c2d1e-jk5gh,deployment_issue
+2026-03-15T18:52:55.032Z INFO  [order-service] POST /api/v1/auth/refresh completed status=201 latency=22ms request_id=95bbe7e4844e,normal
+"2026-03-09T17:20:09.226Z ERROR [auth-service] Helm release failed: upgrade ""auth-service"" failed: timed out waiting for the condition namespace=production",deployment_issue
+2026-03-13T03:22:19.747Z WARN  [billing-service] File descriptor leak detected: open_fds=2026 baseline=249 host=prod-node-03,resource_exhaustion
+2026-03-13T17:38:06.737Z ERROR [search-service] Node scheduling failed: 0/6 nodes available: insufficient cpu pod=api-gateway-7f8b6c-xk9mz,deployment_issue
+2026-03-13T21:47:29.948Z WARN  [event-bus] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/auth/refresh,error_rate
+2026-03-11T15:12:56.844Z ERROR [cdn-proxy] DNS resolution failed for twilio-sms.internal: NXDOMAIN query_time=1323ms,dependency_failure
+2026-03-10T01:23:35.461Z WARN  [inventory-service] Circuit breaker half-open for sendgrid-email testing with 1 request after 30s cooldown,dependency_failure
+"2026-03-15T13:37:33.216Z ERROR [worker-pool] gRPC connection to cloudflare-dns failed: code=UNAVAILABLE desc=""dns resolution failed for cloudflare-dns.svc.cluster.local""",dependency_failure
+"2026-03-12T11:05:37.552Z FATAL [cache-manager] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-11T09:59:51.525Z WARN  [order-service] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-03,resource_exhaustion
+2026-03-13T23:49:41.068Z FATAL [billing-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-3c pid=156,resource_exhaustion
+2026-03-16T14:45:39.068Z WARN  [inventory-service] Blue-green switch aborted: new version health check failed endpoint=/readyz host=k8s-worker-2b,deployment_issue
+"2026-03-13T14:59:13.904Z ERROR [cdn-proxy] PUT /api/v1/auth/refresh failed status=502 error=""Internal Server Error"" request_id=3235e77f8da5",error_rate
+"2026-03-17T02:44:10.027Z ERROR [user-service] ConfigMap user-service-config not found in namespace production, using defaults",config_error
+2026-03-14T10:38:37.209Z FATAL [notification-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-3c pid=50204,resource_exhaustion
+"2026-03-10T15:47:02.429Z WARN  [worker-pool] Consul health check failing for sendgrid-email: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-16T15:46:40.097Z ERROR [payment-service] Init container failed: exit code 1 container=db-migration pod=order-service-3c2d1e-jk5gh reason=""migration failed""",deployment_issue
+"2026-03-10T17:00:13.409Z ERROR [cache-manager] Database connection lost: mysql-orders error=""server closed the connection unexpectedly"" retry_in=5s",dependency_failure
+2026-03-13T05:37:09.707Z ERROR [scheduler] Circuit breaker OPEN for /api/v1/orders failures=23/25 window=30s,error_rate
+2026-03-10T04:06:52.856Z FATAL [cdn-proxy] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-02 pid=38779,resource_exhaustion
+"2026-03-17T12:31:20.674Z ERROR [inventory-service] MongoDB replica set election in progress: elasticsearch-cluster error=""not primary"" retrying in 3s",dependency_failure
+2026-03-16T04:58:08.122Z WARN  [event-bus] CPU throttling detected: 74% throttled periods pod=auth-service-5d4e3f-qr7ws cpu_limit=500m,resource_exhaustion
+2026-03-16T14:54:34.846Z ERROR [payment-service] Redis READONLY: You can't write against a read only replica host=postgres-replica-1 command=SET,dependency_failure
+"2026-03-09T15:23:45.658Z ERROR [inventory-service] Invalid configuration: max_connections must be > 0, got -1 source=/etc/inventory-service/config.yaml",config_error
+2026-03-14T08:28:40.962Z WARN  [inventory-service] CPU throttling detected: 76% throttled periods pod=api-gateway-7f8b6c-xk9mz cpu_limit=500m,resource_exhaustion
+"2026-03-17T13:26:56.093Z WARN  [user-service] TLS certificate path /etc/ssl/user-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-10T16:56:49.733Z ERROR [order-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+"2026-03-11T09:30:49.726Z ERROR [event-bus] Init container failed: exit code 1 container=db-migration pod=payment-service-9a8b7c-lm2np reason=""migration failed""",deployment_issue
+2026-03-10T04:11:10.115Z ERROR [analytics-service] CrashLoopBackOff pod=auth-service-5d4e3f-qr7ws namespace=default restart_count=12 back_off=5m,deployment_issue
+2026-03-11T04:36:20.414Z WARN  [search-service] Rollout stalled: deployment/search-service 2/5 replicas available deadline=600s namespace=staging,deployment_issue
+"2026-03-15T18:12:45.426Z ERROR [notification-service] MongoDB replica set election in progress: redis-cache-02 error=""not primary"" retrying in 3s",dependency_failure
+2026-03-13T07:50:11.314Z DEBUG [cache-manager] DNS resolution host=prod-node-01 resolved_in=3ms ttl=154s,normal
+2026-03-12T18:20:42.142Z INFO  [payment-service] Rate limiter token_bucket refilled bucket=payment-service tokens=100 interval=60s,normal
+2026-03-13T22:28:45.251Z WARN  [worker-pool] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=k8s-worker-1a,resource_exhaustion
+2026-03-13T10:08:42.656Z INFO  [billing-service] Graceful shutdown initiated pid=32113 signal=SIGTERM,normal
+2026-03-12T16:52:32.055Z ERROR [user-service] HTTP 503 Service Unavailable upstream=cloudflare-dns retries=3/3 request_id=eb793325fb5d,error_rate
+2026-03-09T19:38:22.443Z WARN  [auth-service] File descriptor leak detected: open_fds=1521 baseline=219 host=k8s-worker-3c,resource_exhaustion
+2026-03-09T16:57:57.230Z ERROR [notification-service] Kafka broker unreachable: broker_id=0 host=kafka-1.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-14T15:09:26.305Z INFO  [billing-service] Health check passed endpoint=/healthz status=ok uptime=34521s,normal
+2026-03-12T13:27:26.247Z INFO  [order-service] Rate limiter token_bucket refilled bucket=order-service tokens=100 interval=60s,normal
+"2026-03-16T23:22:07.959Z ERROR [payment-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+2026-03-12T07:11:54.062Z ERROR [worker-pool] PersistentVolumeClaim worker-pool-data pending: no persistent volumes available for this claim namespace=default,deployment_issue
+"2026-03-11T20:14:42.132Z ERROR [analytics-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+"2026-03-14T07:38:01.162Z WARN  [billing-service] Retry attempt 3/5 for PATCH /api/v1/notifications last_error=""connection reset by peer""",error_rate
+2026-03-13T13:36:39.055Z ERROR [payment-service] Connection refused to mysql-orders host=10.0.19.175:5432 errno=ECONNREFUSED,dependency_failure
+2026-03-10T12:21:08.555Z ERROR [billing-service] Connection pool exhausted: active=100/100 waiting=20 timeout=5000ms db=elasticsearch-cluster,resource_exhaustion
+2026-03-09T17:58:17.931Z ERROR [user-service] Schema migration version mismatch: expected=42 got=39 database=postgres-primary,config_error
+2026-03-15T06:34:02.318Z WARN  [billing-service] File descriptor leak detected: open_fds=3742 baseline=165 host=prod-node-01,resource_exhaustion
+"2026-03-15T02:09:53.925Z WARN  [cdn-proxy] Canary deployment cdn-proxy-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-14T19:32:32.604Z WARN  [inventory-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/payments,error_rate
+2026-03-10T12:32:19.452Z WARN  [event-bus] Upstream sendgrid-email responding slowly: p99=11377ms p50=891ms threshold=1000ms,dependency_failure
+2026-03-09T23:37:37.549Z ERROR [inventory-service] Unhandled exception in request handler: NullPointerException at com.inventory-service.handler.process(Handler.java:142) request_id=fb82fcc3f911,error_rate
+"2026-03-10T01:40:32.819Z ERROR [worker-pool] Helm release failed: upgrade ""worker-pool"" failed: timed out waiting for the condition namespace=staging",deployment_issue
+"2026-03-17T04:53:16.471Z WARN  [analytics-service] Canary deployment analytics-service-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+"2026-03-12T19:21:58.481Z ERROR [search-service] ConfigMap search-service-config not found in namespace production, using defaults",config_error
+2026-03-15T14:08:40.144Z ERROR [cache-manager] Evicted pod=auth-service-5d4e3f-qr7ws namespace=production reason=The node was low on resource: memory,resource_exhaustion
+2026-03-17T13:10:44.954Z INFO  [payment-service] Metrics exported datapoints=464 target=prometheus,normal
+2026-03-14T09:11:27.798Z ERROR [api-gateway] OOMKilled container=api-gateway pod=order-service-3c2d1e-jk5gh namespace=staging memory_limit=512Mi usage=511Mi,resource_exhaustion
+"2026-03-12T04:04:21.850Z ERROR [event-bus] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/event-bus.Service/Process",error_rate
+2026-03-12T10:55:24.769Z ERROR [auth-service] ENOMEM: mmap failed size=1881MB host=k8s-worker-1a available_memory=87MB,resource_exhaustion
+2026-03-16T11:20:09.648Z ERROR [worker-pool] DNS resolution failed for aws-s3.internal: NXDOMAIN query_time=4902ms,dependency_failure
+2026-03-10T17:26:28.924Z WARN  [payment-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/inventory,error_rate
+2026-03-13T21:35:51.819Z DEBUG [scheduler] TLS handshake completed peer=k8s-worker-2b:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+"2026-03-15T19:56:54.821Z ERROR [search-service] GET /healthz failed status=500 error=""Internal Server Error"" request_id=b99726048e0c",error_rate
+2026-03-12T14:21:46.047Z ERROR [cache-manager] DNS resolution failed for aws-s3.internal: NXDOMAIN query_time=1629ms,dependency_failure
+2026-03-12T20:32:02.008Z ERROR [user-service] Secret mount failed: /var/run/secrets/user-service/api-key: no such file or directory,config_error
+2026-03-10T19:29:56.020Z INFO  [event-bus] Scheduled job cron.cleanup completed in 298ms removed=38 records,normal
+"2026-03-16T00:15:30.162Z WARN  [payment-service] Consul health check failing for aws-s3: status=critical output=""TCP connection timeout""",dependency_failure
+"2026-03-11T12:29:06.539Z WARN  [auth-service] Consul health check failing for datadog-agent: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-13T14:32:03.437Z ERROR [order-service] Feature flag parsing error: invalid JSON in flag 'enable_new_checkout' value='tru' expected boolean,config_error
+"2026-03-14T07:48:42.862Z WARN  [cache-manager] Consul health check failing for aws-sqs: status=critical output=""TCP connection timeout""",dependency_failure
+2026-03-10T07:14:46.147Z ERROR [search-service] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+"2026-03-14T19:10:55.897Z WARN  [event-bus] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+2026-03-12T09:00:46.718Z ERROR [event-bus] Evicted pod=payment-service-9a8b7c-lm2np namespace=staging reason=The node was low on resource: memory,resource_exhaustion
+2026-03-11T17:08:51.116Z INFO  [payment-service] Session created user_id=0e049cd51025 ip=10.173.147.52 ttl=3600s,normal
+"2026-03-11T13:10:28.830Z ERROR [search-service] gRPC call failed code=UNAVAILABLE desc=""transport is closing"" method=/search-service.Service/Process",error_rate
+"2026-03-12T09:10:33.181Z ERROR [event-bus] Response validation failed: expected 200, got 400 body=""{\""error\"":\""service degraded\""}"" request_id=f92a8882524b",error_rate
+2026-03-13T17:06:36.910Z ERROR [event-bus] S3 GetObject failed: bucket=prod-assets key=config/event-bus.yaml error=NoSuchBucket request_id=d2bfd5f93c03,dependency_failure
+"2026-03-14T10:35:00.601Z ERROR [cdn-proxy] TLS handshake failed: consul-cluster:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-16T17:58:24.741Z ERROR [user-service] ENOMEM: mmap failed size=564MB host=k8s-worker-1a available_memory=20MB,resource_exhaustion
+2026-03-12T21:48:36.811Z WARN  [auth-service] File descriptor leak detected: open_fds=3521 baseline=165 host=prod-node-02,resource_exhaustion
+2026-03-11T03:17:51.192Z WARN  [event-bus] Disk space warning: /var/log usage=91% available=2.3GB threshold=85% host=k8s-worker-2b,resource_exhaustion
+"2026-03-16T00:49:15.716Z WARN  [search-service] Deprecated config key 'ssl_verify' used, migrate to 'tls.verify_certificates' before v3.0",config_error
+"2026-03-16T07:07:52.253Z ERROR [inventory-service] Response validation failed: expected 200, got 502 body=""{\""error\"":\""service degraded\""}"" request_id=eb35d4b70709",error_rate
+2026-03-11T11:48:14.352Z WARN  [event-bus] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-02,resource_exhaustion
+2026-03-12T23:59:44.042Z ERROR [worker-pool] Circuit breaker OPEN for /api/v1/payments failures=23/25 window=30s,error_rate
+2026-03-12T16:36:40.758Z ERROR [api-gateway] Node scheduling failed: 0/7 nodes available: insufficient cpu pod=worker-pool-6e5f4g-vw8xy,deployment_issue
+2026-03-10T14:36:31.227Z ERROR [cdn-proxy] Liveness probe failed: HTTP probe failed with statuscode 503 pod=payment-service-9a8b7c-lm2np consecutive_failures=3,deployment_issue
+2026-03-11T14:00:51.099Z INFO  [billing-service] Worker thread started thread_id=8 pool_size=16,normal
+2026-03-15T22:32:23.139Z WARN  [analytics-service] Swap usage high: 80% used (3GB/8GB) host=k8s-worker-2b,resource_exhaustion
+"2026-03-10T15:01:20.433Z ERROR [api-gateway] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-16T12:37:13.019Z ERROR [payment-service] Redis READONLY: You can't write against a read only replica host=postgres-replica-1 command=SET,dependency_failure
+2026-03-10T08:49:03.176Z ERROR [order-service] DNS resolution failed for aws-s3.internal: NXDOMAIN query_time=2369ms,dependency_failure
+2026-03-14T22:53:23.353Z ERROR [billing-service] Redis READONLY: You can't write against a read only replica host=redis-cache-01 command=SET,dependency_failure
+"2026-03-15T05:25:52.672Z WARN  [billing-service] Canary deployment billing-service-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-11T16:16:16.596Z INFO  [notification-service] Message consumed topic=orders partition=10 offset=730688 lag=0,normal
+2026-03-10T04:13:57.276Z WARN  [worker-pool] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=prod-node-03,resource_exhaustion
+2026-03-16T12:50:42.697Z WARN  [user-service] Memory usage critical: 94.7% used (heap=1847MB/1952MB) GC overhead=38% host=k8s-worker-1a,resource_exhaustion
+2026-03-14T15:41:59.536Z DEBUG [user-service] DNS resolution host=prod-node-02 resolved_in=14ms ttl=76s,normal
+"2026-03-10T14:16:25.118Z ERROR [cache-manager] gRPC connection to sendgrid-email failed: code=UNAVAILABLE desc=""dns resolution failed for sendgrid-email.svc.cluster.local""",dependency_failure
+"2026-03-12T18:11:53.105Z ERROR [auth-service] Container runtime error: runc create failed: unable to start container process: exec: ""/app/start.sh"": permission denied",deployment_issue
+2026-03-10T05:18:03.064Z DEBUG [inventory-service] DNS resolution host=staging-node-01 resolved_in=4ms ttl=191s,normal
+2026-03-16T08:41:46.958Z ERROR [inventory-service] Evicted pod=api-gateway-7f8b6c-xk9mz namespace=kube-system reason=The node was low on resource: memory,resource_exhaustion
+2026-03-10T10:49:38.942Z INFO  [analytics-service] Session created user_id=9ce512fc4379 ip=10.178.13.154 ttl=3600s,normal
+2026-03-17T01:22:44.207Z ERROR [user-service] YAML parse error in /etc/user-service/config.yaml: line 47: mapping values are not allowed here,config_error
+2026-03-12T02:23:57.494Z INFO  [cdn-proxy] Successfully processed request request_id=d14d6098dbff duration=32ms,normal
+2026-03-14T04:52:19.193Z WARN  [api-gateway] Rolling update paused: maxUnavailable reached deployment/api-gateway unavailable=3,deployment_issue
+2026-03-15T01:30:10.920Z WARN  [inventory-service] Upstream sendgrid-email responding slowly: p99=4191ms p50=1565ms threshold=1000ms,dependency_failure
+2026-03-15T22:53:57.617Z INFO  [scheduler] PATCH /api/v1/notifications completed status=304 latency=269ms request_id=a553916ab6a3,normal
+"2026-03-12T11:23:57.576Z ERROR [cache-manager] MongoDB replica set election in progress: redis-cache-01 error=""not primary"" retrying in 10s",dependency_failure
+2026-03-13T23:15:18.418Z INFO  [billing-service] Successfully processed request request_id=29100146f1cc duration=229ms,normal
+2026-03-10T04:37:01.542Z WARN  [cache-manager] CPU throttling detected: 87% throttled periods pod=auth-service-5d4e3f-qr7ws cpu_limit=500m,resource_exhaustion
+2026-03-12T18:56:03.453Z INFO  [billing-service] Message consumed topic=orders partition=2 offset=313569 lag=0,normal
+2026-03-13T05:41:35.252Z ERROR [auth-service] Unhandled exception in request handler: NullPointerException at com.auth-service.handler.process(Handler.java:142) request_id=088b0d33533f,error_rate
+"2026-03-12T10:56:17.650Z ERROR [inventory-service] TLS handshake failed: cloudflare-dns:443 error=""certificate has expired"" not_after=2025-12-01T00:00:00Z",dependency_failure
+2026-03-11T23:18:15.647Z WARN  [user-service] Rollout stalled: deployment/user-service 2/5 replicas available deadline=600s namespace=production,deployment_issue
+2026-03-11T10:48:55.778Z ERROR [analytics-service] Redis READONLY: You can't write against a read only replica host=postgres-primary command=SET,dependency_failure
+2026-03-13T22:48:21.616Z WARN  [order-service] Rolling update paused: maxUnavailable reached deployment/order-service unavailable=4,deployment_issue
+2026-03-12T12:12:52.883Z ERROR [user-service] Unhandled exception in request handler: NullPointerException at com.user-service.handler.process(Handler.java:142) request_id=5a597f3f6f45,error_rate
+2026-03-14T08:03:08.271Z ERROR [scheduler] Schema migration version mismatch: expected=42 got=39 database=postgres-primary,config_error
+2026-03-15T23:49:33.550Z ERROR [worker-pool] java.lang.OutOfMemoryError: Java heap space at java.util.Arrays.copyOf(Arrays.java:3236),resource_exhaustion
+2026-03-09T22:37:43.609Z ERROR [analytics-service] Too many open files: ulimit=1422 current=1423 host=k8s-worker-2b,resource_exhaustion
+2026-03-16T16:00:09.361Z ERROR [event-bus] Evicted pod=api-gateway-7f8b6c-xk9mz namespace=default reason=The node was low on resource: memory,resource_exhaustion
+2026-03-13T23:02:17.615Z INFO  [cdn-proxy] Rate limiter token_bucket refilled bucket=cdn-proxy tokens=100 interval=60s,normal
+"2026-03-17T10:46:54.092Z ERROR [analytics-service] gRPC connection to datadog-agent failed: code=UNAVAILABLE desc=""dns resolution failed for datadog-agent.svc.cluster.local""",dependency_failure
+"2026-03-11T22:48:36.167Z ERROR [cache-manager] Response validation failed: expected 200, got 502 body=""{\""error\"":\""service degraded\""}"" request_id=4f374727bff5",error_rate
+2026-03-11T06:40:21.223Z FATAL [api-gateway] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-3c,config_error
+2026-03-14T03:05:21.284Z INFO  [notification-service] Deployment readiness probe succeeded pod=api-gateway-7f8b6c-xk9mz namespace=production,normal
+2026-03-14T18:03:39.251Z WARN  [billing-service] Rollout stalled: deployment/billing-service 2/5 replicas available deadline=600s namespace=default,deployment_issue
+2026-03-11T04:51:09.765Z INFO  [scheduler] Metrics exported datapoints=105 target=prometheus,normal
+2026-03-11T12:20:53.464Z WARN  [notification-service] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/api/v1/auth/refresh,error_rate
+"2026-03-16T07:36:58.486Z ERROR [auth-service] Response validation failed: expected 200, got 401 body=""{\""error\"":\""service degraded\""}"" request_id=f54af9694ce1",error_rate
+"2026-03-11T07:11:21.157Z FATAL [cache-manager] Environment variable DATABASE_URL is not set, cannot start service",config_error
+2026-03-12T14:57:58.543Z ERROR [auth-service] Request timeout after 30000ms PUT /api/v1/users request_id=3ce8a0a43fe7,error_rate
+2026-03-11T22:09:24.354Z ERROR [user-service] Too many open files: ulimit=3019 current=1160 host=prod-node-02,resource_exhaustion
+2026-03-10T05:56:43.814Z WARN  [api-gateway] Error rate threshold exceeded: 15.3% errors in last 60s (threshold=5%) endpoint=/readyz,error_rate
+2026-03-10T21:27:58.908Z INFO  [auth-service] Deployment readiness probe succeeded pod=worker-pool-6e5f4g-vw8xy namespace=production,normal
+2026-03-12T08:21:58.827Z WARN  [auth-service] File descriptor leak detected: open_fds=2280 baseline=290 host=prod-node-03,resource_exhaustion
+2026-03-15T08:11:11.119Z DEBUG [auth-service] Connection pool stats: active=5 idle=15 total=20 host=k8s-worker-3c,normal
+"2026-03-10T15:49:48.404Z ERROR [inventory-service] Invalid log level 'TRACE' in config, falling back to INFO",config_error
+2026-03-16T02:54:04.323Z DEBUG [payment-service] TLS handshake completed peer=staging-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+2026-03-09T21:10:54.716Z WARN  [payment-service] Circuit breaker half-open for vault-server testing with 1 request after 30s cooldown,dependency_failure
+2026-03-16T23:33:52.229Z DEBUG [billing-service] TLS handshake completed peer=prod-node-01:443 protocol=TLSv1.3 cipher=TLS_AES_256_GCM_SHA384,normal
+"2026-03-14T06:02:24.988Z ERROR [user-service] MongoDB replica set election in progress: redis-cache-01 error=""not primary"" retrying in 1s",dependency_failure
+"2026-03-11T12:39:47.432Z ERROR [cache-manager] ConfigMap cache-manager-config not found in namespace production, using defaults",config_error
+2026-03-16T22:52:24.582Z INFO  [api-gateway] Cache hit ratio=0.85 keys=3805 host=staging-node-01,normal
+2026-03-13T22:02:47.945Z ERROR [payment-service] Connection pool exhausted: active=99/100 waiting=43 timeout=5000ms db=mysql-orders,resource_exhaustion
+2026-03-12T15:48:19.569Z WARN  [cache-manager] Swap usage high: 95% used (3GB/7GB) host=k8s-worker-3c,resource_exhaustion
+2026-03-16T00:45:28.843Z INFO  [analytics-service] GET /api/v1/orders completed status=200 latency=212ms request_id=09ad7424882b,normal
+2026-03-15T06:47:52.888Z ERROR [worker-pool] S3 GetObject failed: bucket=prod-assets key=config/worker-pool.yaml error=NoSuchBucket request_id=e6d11878934f,dependency_failure
+2026-03-17T04:42:39.229Z ERROR [notification-service] HPA unable to scale: unable to get metrics for resource cpu: no metrics returned from resource metrics API,deployment_issue
+2026-03-16T17:28:17.475Z INFO  [cache-manager] Deployment readiness probe succeeded pod=worker-pool-6e5f4g-vw8xy namespace=production,normal
+2026-03-14T11:42:37.629Z WARN  [event-bus] Swap usage high: 71% used (4GB/4GB) host=k8s-worker-2b,resource_exhaustion
+"2026-03-12T07:02:39.886Z WARN  [worker-pool] Canary deployment worker-pool-canary error rate 12.5% exceeds threshold 5%, initiating rollback",deployment_issue
+2026-03-10T05:01:36.231Z ERROR [auth-service] Request timeout after 30000ms PUT /api/v1/auth/refresh request_id=c5e1aad3d712,error_rate
+2026-03-12T13:47:46.135Z FATAL [user-service] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=prod-node-01,config_error
+2026-03-12T11:31:19.259Z DEBUG [inventory-service] Connection pool stats: active=5 idle=15 total=20 host=prod-node-01,normal
+2026-03-13T22:18:34.137Z INFO  [scheduler] Deployment readiness probe succeeded pod=worker-pool-6e5f4g-vw8xy namespace=monitoring,normal
+2026-03-13T15:09:34.367Z ERROR [cache-manager] Kafka broker unreachable: broker_id=3 host=kafka-3.internal:9092 errno=ETIMEDOUT,dependency_failure
+2026-03-17T02:50:56.111Z ERROR [event-bus] ArgoCD sync failed: application event-bus sync status=OutOfSync health=Degraded,deployment_issue
+2026-03-11T09:36:51.672Z INFO  [inventory-service] Scheduled job cron.cleanup completed in 96ms removed=43 records,normal
+"2026-03-10T20:54:28.779Z ERROR [worker-pool] Invalid configuration: max_connections must be > 0, got -1 source=/etc/worker-pool/config.yaml",config_error
+2026-03-14T04:36:47.977Z INFO  [worker-pool] PATCH /api/v1/users completed status=204 latency=33ms request_id=7f02a1c42043,normal
+2026-03-12T05:03:31.987Z ERROR [notification-service] Unhandled exception in request handler: NullPointerException at com.notification-service.handler.process(Handler.java:142) request_id=5f86bb0e055b,error_rate
+2026-03-15T17:21:26.771Z ERROR [scheduler] YAML parse error in /etc/scheduler/config.yaml: line 47: mapping values are not allowed here,config_error
+2026-03-17T11:28:25.005Z WARN  [cache-manager] Rollout stalled: deployment/cache-manager 2/5 replicas available deadline=600s namespace=production,deployment_issue
+2026-03-11T09:58:31.516Z ERROR [api-gateway] inode exhaustion: used=99.8% filesystem=/dev/sda1 host=prod-node-01,resource_exhaustion
+"2026-03-13T12:46:03.687Z ERROR [api-gateway] Vault sealed: unable to retrieve secret secret/api-gateway/db-creds error=""Vault is sealed""",dependency_failure
+2026-03-16T20:23:22.233Z INFO  [scheduler] Deployment readiness probe succeeded pod=worker-pool-6e5f4g-vw8xy namespace=default,normal
+"2026-03-11T07:51:41.943Z ERROR [billing-service] ConfigMap billing-service-config not found in namespace production, using defaults",config_error
+"2026-03-11T03:21:33.216Z ERROR [event-bus] MongoDB replica set election in progress: redis-cache-02 error=""not primary"" retrying in 6s",dependency_failure
+2026-03-11T08:16:28.553Z INFO  [auth-service] DELETE /api/v2/search completed status=200 latency=317ms request_id=1b183053d1f3,normal
+2026-03-16T14:36:32.377Z WARN  [notification-service] Circuit breaker half-open for sendgrid-email testing with 1 request after 30s cooldown,dependency_failure
+2026-03-09T21:47:49.248Z WARN  [auth-service] Thread pool saturated: active=170/200 queue=507 rejected=29,resource_exhaustion
+2026-03-16T09:41:47.644Z INFO  [user-service] Rate limiter token_bucket refilled bucket=user-service tokens=100 interval=60s,normal
+2026-03-09T15:51:56.106Z ERROR [cdn-proxy] Redis READONLY: You can't write against a read only replica host=mysql-orders command=SET,dependency_failure
+"2026-03-15T23:54:01.393Z WARN  [notification-service] TLS certificate path /etc/ssl/notification-service/tls.crt does not exist, disabling TLS",config_error
+2026-03-13T03:08:36.109Z ERROR [cdn-proxy] S3 GetObject failed: bucket=prod-assets key=config/cdn-proxy.yaml error=NoSuchBucket request_id=a2374e3f514a,dependency_failure
+2026-03-15T14:39:43.238Z ERROR [scheduler] Evicted pod=payment-service-9a8b7c-lm2np namespace=monitoring reason=The node was low on resource: memory,resource_exhaustion
+2026-03-12T15:05:56.351Z DEBUG [event-bus] DNS resolution host=prod-node-01 resolved_in=2ms ttl=140s,normal
+2026-03-11T13:20:18.449Z FATAL [order-service] Panic recovered: runtime error: index out of range [5] with length 3 goroutine=275,error_rate
+2026-03-15T10:41:34.639Z WARN  [event-bus] Swap usage high: 70% used (5GB/6GB) host=k8s-worker-1a,resource_exhaustion
+2026-03-15T14:50:59.195Z ERROR [billing-service] YAML parse error in /etc/billing-service/config.yaml: line 47: mapping values are not allowed here,config_error
+"2026-03-11T14:25:09.127Z ERROR [inventory-service] Response validation failed: expected 200, got 500 body=""{\""error\"":\""service degraded\""}"" request_id=e307e8857132",error_rate
+2026-03-11T12:25:49.210Z WARN  [auth-service] Blue-green switch aborted: new version health check failed endpoint=/readyz host=prod-node-03,deployment_issue
+"2026-03-11T06:19:35.305Z ERROR [worker-pool] GET /api/v1/auth/login failed status=400 error=""Internal Server Error"" request_id=183a43ffd40b",error_rate
+2026-03-16T06:01:39.940Z ERROR [cdn-proxy] Redis READONLY: You can't write against a read only replica host=mysql-orders command=SET,dependency_failure
+2026-03-16T06:09:38.897Z WARN  [auth-service] Upstream vault-server responding slowly: p99=12773ms p50=1978ms threshold=1000ms,dependency_failure
+"2026-03-15T07:59:30.406Z ERROR [payment-service] gRPC connection to stripe-api failed: code=UNAVAILABLE desc=""dns resolution failed for stripe-api.svc.cluster.local""",dependency_failure
+2026-03-13T14:47:01.419Z INFO  [worker-pool] Rate limiter token_bucket refilled bucket=worker-pool tokens=100 interval=60s,normal
+2026-03-10T09:04:24.112Z FATAL [event-bus] Cannot fork new process: errno=12 (Cannot allocate memory) host=k8s-worker-1a pid=27070,resource_exhaustion
+"2026-03-14T23:19:05.893Z ERROR [auth-service] Traceback (most recent call last):\n  File ""/app/auth-service/views.py"", line 291, in handle_request\n    result = process(data)\nValueError: invalid literal for int() with base 10: 'abc'",error_rate
+2026-03-15T22:51:09.499Z ERROR [worker-pool] S3 GetObject failed: bucket=prod-assets key=config/worker-pool.yaml error=NoSuchBucket request_id=26901ac9f0e2,dependency_failure
+2026-03-12T21:03:51.241Z INFO  [analytics-service] Successfully processed request request_id=73e17de027dc duration=90ms,normal
+2026-03-11T07:19:26.038Z FATAL [event-bus] Port conflict: bind 0.0.0.0:8080 failed: address already in use host=k8s-worker-2b,config_error
+2026-03-14T00:15:07.073Z ERROR [api-gateway] Circuit breaker OPEN for /api/v1/auth/login failures=23/25 window=30s,error_rate
+2026-03-15T15:03:08.374Z WARN  [order-service] Circuit breaker half-open for aws-s3 testing with 1 request after 30s cooldown,dependency_failure
+2026-03-09T17:40:01.117Z FATAL [search-service] Cannot fork new process: errno=12 (Cannot allocate memory) host=prod-node-02 pid=31561,resource_exhaustion
+2026-03-12T01:10:30.233Z INFO  [search-service] Scheduled job cron.cleanup completed in 114ms removed=22 records,normal

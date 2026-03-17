@@ -1,0 +1,87 @@
+{
+  "incident_id": "INC-2024-0892",
+  "investigation_id": "inv-demo-001",
+  "created_at": "2024-11-15T03:15:00Z",
+  "resolved_at": "2024-11-15T03:45:00Z",
+  
+  "alert": {
+    "id": "alert-demo-001",
+    "source": "prometheus",
+    "title": "High error rate on payment-service",
+    "description": "Error rate exceeded 5% threshold for 5 minutes",
+    "severity": "critical",
+    "service": "payment-service",
+    "environment": "production"
+  },
+  
+  "alert_type": "error_rate",
+  "severity": "critical",
+  "affected_services": ["payment-service", "checkout-service"],
+  "environment": "production",
+  
+  "investigation_duration_seconds": 95,
+  "agents_used": ["DeployAgent", "LogsAgent", "MetricsAgent"],
+  
+  "root_cause": {
+    "id": "rca-demo-001",
+    "hypothesis": "Connection leak in PaymentProcessor.java introduced in v2.3.1 caused connection pool exhaustion",
+    "category": "deployment",
+    "confidence": 0.89
+  },
+  "root_cause_category": "deployment",
+  "root_cause_confidence": 0.89,
+  
+  "reasoning_chain": [
+    {
+      "step": 1,
+      "agent": "DeployAgent",
+      "finding": "Deployment of v2.3.1 at 01:15",
+      "reasoning": "Deployment 2 hours before incident is suspicious",
+      "confidence_delta": 0.3
+    },
+    {
+      "step": 2,
+      "agent": "LogsAgent",
+      "finding": "NullPointerException in PaymentProcessor.java line 142",
+      "reasoning": "Error signature matches connection handling code",
+      "confidence_delta": 0.35
+    },
+    {
+      "step": 3,
+      "agent": "MetricsAgent",
+      "finding": "Connection pool at 100% capacity starting 03:10",
+      "reasoning": "Resource exhaustion confirms connection leak",
+      "confidence_delta": 0.24
+    }
+  ],
+  
+  "remediation_attempted": [
+    {
+      "action": "Rollback to v2.3.0",
+      "command": "kubectl rollout undo deployment/payment-service",
+      "success": true
+    },
+    {
+      "action": "Increase connection pool size",
+      "command": "kubectl set env deployment/payment-service POOL_SIZE=50",
+      "success": true
+    }
+  ],
+  "remediation_successful": true,
+  "remediation_that_worked": {
+    "summary": "Rollback to v2.3.0 and increase connection pool size",
+    "steps": [
+      "Rollback deployment",
+      "Increase pool size from 20 to 50",
+      "Monitor error rate"
+    ]
+  },
+  "resolution_time_seconds": 1800,
+  
+  "human_verified": true,
+  "human_correction": null,
+  "feedback_score": 5,
+  "feedback_notes": "Accurate root cause identification. Rollback fixed the issue.",
+  
+  "tags": ["payment", "connection-pool", "deployment"]
+}

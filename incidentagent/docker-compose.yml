@@ -1,0 +1,74 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - GRADIENT_API_TOKEN=${GRADIENT_API_TOKEN:-}
+      - GRADIENT_MODEL_ACCESS_KEY=${GRADIENT_MODEL_ACCESS_KEY:-}
+      - LLM_MODEL=${LLM_MODEL:-claude-sonnet-4-20250514}
+      - ELASTICSEARCH_HOST=${ELASTICSEARCH_HOST:-elasticsearch}
+      - ELASTICSEARCH_PORT=${ELASTICSEARCH_PORT:-9200}
+      - PROMETHEUS_URL=${PROMETHEUS_URL:-}
+      - KUBECONFIG=${KUBECONFIG:-}
+    command: ["uvicorn", "incidentagent.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
+    volumes:
+      - ./:/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+    depends_on:
+      - elasticsearch
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+      - GRADIENT_API_TOKEN=${GRADIENT_API_TOKEN:-}
+      - GRADIENT_MODEL_ACCESS_KEY=${GRADIENT_MODEL_ACCESS_KEY:-}
+      - API_URL=http://api:8000
+    command: ["streamlit", "run", "incidentagent/ui/dashboard.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
+    volumes:
+      - ./:/app
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  elasticsearch_data:
+
+networks:
+  default:
+    name: incidentagent_network
