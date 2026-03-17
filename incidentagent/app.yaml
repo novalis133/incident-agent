@@ -6,7 +6,7 @@ services:
       repo: novalis133/incident-agent
       branch: main
       deploy_on_push: true
-    source_dir: /incidentagent
+    source_dir: /
     dockerfile_path: Dockerfile
     http_port: 8000
     instance_count: 1
