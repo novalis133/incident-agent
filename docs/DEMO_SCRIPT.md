@@ -1,84 +1,184 @@
-# IncidentIQ Demo Script
+# IncidentIQ Demo Script (3 minutes)
 
-## Video Structure (3 minutes)
+> Record with OBS Studio, 1920x1080, dark mode everywhere, highlight cursor.
 
-### 0:00 - 0:30 | The Problem
+---
 
-**Narration:**
+## Scene 1 — The Problem (0:00 - 0:30)
+
+**Show on screen:** A blank dark slide or text overlay with these words as you speak them.
+
+**Say:**
 "It's 3am. PagerDuty fires. Your payment service is throwing 500 errors.
-Enterprise downtime costs $5,600 per minute. An engineer wakes up, opens 5 different tools -
-logs in Elasticsearch, metrics in Grafana, deployments in Kubernetes, runbooks in Confluence.
-50 minutes later, they find the root cause: a bad deployment.
-
-What if an AI agent could do that investigation in 2 minutes, before you even wake up?"
-
-**Visual:** Show a PagerDuty alert screen, then montage of tools being switched between.
+Enterprise downtime costs $5,600 per minute. An engineer opens 5 tools —
+logs, metrics, Kubernetes, runbooks, past incidents. 50 minutes later they
+find the root cause: a bad deployment.
+What if an AI agent could do that in under 2 minutes?"
 
 ---
 
-### 0:30 - 1:30 | Live Demo
+## Scene 2 — Landing Page (0:30 - 0:50)
 
-**Narration:**
-"This is IncidentIQ - an autonomous AI agent built on DigitalOcean Gradient."
+**Open in browser:**
+```
+https://incidentiq-a82rg.ondigitalocean.app/
+```
 
-**Actions:**
-1. Open the Streamlit dashboard
-2. Show the alert submission form
-3. Enter: "High error rate on payment-service" / severity: critical / service: payment-service
-4. Click "Investigate"
-5. Show the real-time progress as agents work:
-   - Triage Agent classifies the alert
-   - Deploy Agent finds a recent deployment (v2.3.1)
-   - Logs Agent finds ConnectionPoolExhaustedException across multiple pods
-   - Metrics Agent shows connection pool at 100% capacity
-   - K8s Agent reports pod restarts
-   - Runbook Agent matches "Connection Pool Exhaustion" runbook
-   - Memory Agent finds a similar past incident
+**Say:**
+"This is IncidentAgent — an autonomous AI investigation system running live on DigitalOcean.
+Six specialist agents, a GPU-trained ML model, 100% alert classification accuracy, all under 3 seconds."
 
-**Key callout:** "Six specialist agents, working in sequence, each building on the previous one's findings."
+**Show on screen:** Scroll the landing page slowly — point out the 3 stats (100%, 6 agents, <3s) and the 4 feature cards.
 
 ---
 
-### 1:30 - 2:30 | Results Walkthrough
+## Scene 3 — API Docs (0:50 - 1:10)
 
-**Narration:**
-"In under 2 minutes, IncidentIQ has completed the investigation."
+**Open in browser:**
+```
+https://incidentiq-a82rg.ondigitalocean.app/docs
+```
 
-**Show each section:**
-1. **Root Cause:** "Deployment of payment-service v2.3.1 introduced a connection pool configuration regression"
-2. **Confidence:** 92%
-3. **Timeline:** Chronological events from deployment to error spike
-4. **Evidence Cards:** Deploy findings, log errors, metric anomalies
-5. **Remediation:** Safe rollback steps with guardrails applied
-6. **Past Incident Match:** Similar incident resolved by rollback
+**Say:**
+"The API is built with FastAPI. We can submit alerts, track investigations, and check health — all through REST endpoints."
 
-**Key callout:** "Notice the guardrails - dangerous commands are blocked, high-risk operations require approval."
+**Show on screen:** Expand the `POST /api/alerts` endpoint to show the schema. Expand `GET /api/investigations/{id}` briefly.
 
 ---
 
-### 2:30 - 3:00 | Gradient Features
+## Scene 4 — Live Investigation (1:10 - 2:00)
 
-**Narration:**
-"Built entirely on DigitalOcean Gradient's AI platform."
+**In the Swagger UI, click "Try it out" on `POST /api/alerts` and paste:**
+```json
+{
+  "id": "demo-001",
+  "source": "pagerduty",
+  "title": "High error rate on payment-service",
+  "description": "Error rate exceeded 5% threshold for 5 minutes with 5xx responses after v2.3.1 deploy",
+  "severity": "critical",
+  "service": "payment-service",
+  "fired_at": "2026-03-17T21:00:00Z"
+}
+```
 
-**Show quickly:**
-1. **ADK:** `@entrypoint`, `@trace_tool`, `@trace_llm`, `@trace_retriever` decorators in code
-2. **Knowledge Bases:** Runbooks and past incidents stored and searched via Gradient KB
-3. **Agent Routing:** Dynamic sub-agent selection based on triage results
-4. **Function Calling:** Each agent declares tools (log search, metric queries, K8s events)
-5. **Guardrails:** Blocked patterns and risk assessment on remediation
-6. **GPU Training:** Custom log anomaly classifier trained on Gradient GPU
-7. **Evaluation:** Automated benchmark suite with accuracy metrics
+**Click Execute.**
 
-**Closing:** "IncidentIQ - because at 3am, you shouldn't have to be the one investigating."
+**Say:**
+"We submit a critical alert — high error rate on payment-service. The system kicks off an investigation instantly."
+
+**Show on screen:** The response with `investigation_id` and `status: running`.
+
+**Now open the investigation result — paste the investigation_id into `GET /api/investigations/{id}` and execute.**
+
+**Say:**
+"In seconds, six agents investigated the incident. The Triage Agent classified it as an error_rate alert. The Deploy Agent found a recent v2.3.1 deployment. The Logs Agent detected ConnectionPoolExhausted exceptions. The Metrics Agent found connection pools at 100%. The K8s Agent spotted pod restarts. And the Runbook Agent matched a known runbook."
+
+**Show on screen:** Scroll through the JSON result — pause on:
+- `root_cause` → `hypothesis` and `category`
+- `confidence_score`
+- `agents_used` list
+- `total_findings`
+- `remediation` → `summary` and `steps`
+- `time_saved_estimate`
 
 ---
+
+## Scene 5 — Health Check (2:00 - 2:10)
+
+**Open in browser:**
+```
+https://incidentiq-a82rg.ondigitalocean.app/health
+```
+
+**Say:**
+"The service is live and healthy on DigitalOcean App Platform."
+
+---
+
+## Scene 6 — Code Walkthrough (2:10 - 2:40)
+
+**Open in browser:**
+```
+https://github.com/novalis133/incident-agent
+```
+
+**Say:**
+"Let me show the Gradient ADK integration in the code."
+
+**Show on screen:** Navigate to these files and briefly highlight the decorated functions:
+
+1. **Main entrypoint** — click `incidentagent/incidentagent/main.py`
+   - Show `@entrypoint` on `main()` (line 64)
+   - Show `@trace_tool("investigation-pipeline")` on `investigate_alert()` (line 129)
+
+2. **Triage agent** — click `incidentagent/incidentagent/agents/triage.py`
+   - Show `@trace_tool("triage-classify")` and `@trace_llm("triage-llm-classify")`
+
+3. **Sub-agents** — click `incidentagent/incidentagent/agents/sub_agents/logs.py`
+   - Show `@trace_retriever("logs-error-search")`
+   - Show ML classifier integration (`_classify_findings`)
+
+4. **GPU model** — click `incidentagent/models/train_classifier.py`
+   - Show TF-IDF + LogisticRegression pipeline and GPU training option
+
+5. **Tests** — click `incidentagent/tests/`
+   - Show `test_triage.py` (27 tests), `test_guardrails.py` (30 tests), `eval_dataset.csv` (20 benchmarks)
+
+**Say:**
+"We use all 7 Gradient features: ADK entrypoint, trace_tool, trace_llm, trace_retriever, Knowledge Bases, Guardrails, and a GPU-trained custom model."
+
+---
+
+## Scene 7 — Closing (2:40 - 3:00)
+
+**Show on screen:** Go back to the landing page:
+```
+https://incidentiq-a82rg.ondigitalocean.app/
+```
+
+**Say:**
+"IncidentAgent. Six AI agents. One root cause. Under 3 seconds.
+Because at 3am, you shouldn't have to be the one investigating.
+Built on DigitalOcean Gradient."
+
+---
+
+## All Links for Demo
+
+| What | URL |
+|------|-----|
+| Landing Page | https://incidentiq-a82rg.ondigitalocean.app/ |
+| API Docs (Swagger) | https://incidentiq-a82rg.ondigitalocean.app/docs |
+| Health Check | https://incidentiq-a82rg.ondigitalocean.app/health |
+| Submit Alert | https://incidentiq-a82rg.ondigitalocean.app/docs#/alerts/create_alert_api_alerts_post |
+| Get Investigation | https://incidentiq-a82rg.ondigitalocean.app/docs#/investigations/get_investigation_api_investigations__investigation_id__get |
+| GitHub Repo | https://github.com/novalis133/incident-agent |
+| Main entrypoint | https://github.com/novalis133/incident-agent/blob/main/incidentagent/incidentagent/main.py |
+| Triage agent | https://github.com/novalis133/incident-agent/blob/main/incidentagent/incidentagent/agents/triage.py |
+| Sub-agents (logs) | https://github.com/novalis133/incident-agent/blob/main/incidentagent/incidentagent/agents/sub_agents/logs.py |
+| GPU model trainer | https://github.com/novalis133/incident-agent/blob/main/incidentagent/models/train_classifier.py |
+| Tests | https://github.com/novalis133/incident-agent/tree/main/incidentagent/tests |
+| Eval dataset | https://github.com/novalis133/incident-agent/blob/main/incidentagent/tests/eval_dataset.csv |
+
+## Alert Payload to Copy-Paste
+
+```json
+{
+  "id": "demo-001",
+  "source": "pagerduty",
+  "title": "High error rate on payment-service",
+  "description": "Error rate exceeded 5% threshold for 5 minutes with 5xx responses after v2.3.1 deploy",
+  "severity": "critical",
+  "service": "payment-service",
+  "fired_at": "2026-03-17T21:00:00Z"
+}
+```
 
 ## Recording Tips
 
-- Use OBS Studio for screen recording
-- Resolution: 1920x1080
+- OBS Studio, 1920x1080, 30fps
+- Dark mode on browser and VS Code
+- Zoom browser to 125% so text is readable
 - Highlight cursor movements
-- Use dark mode on all tools
-- Keep narration pace steady
+- Speak slowly and clearly
 - Total target: 2:30 - 3:00
