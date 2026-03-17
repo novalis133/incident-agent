@@ -22,8 +22,5 @@ ENV PYTHONUNBUFFERED=1
 # Expose ports: 8000 (API) and 8501 (Streamlit)
 EXPOSE 8000 8501
 
-# Default command runs both services
-COPY scripts/start.sh /app/scripts/start.sh
-RUN chmod +x /app/scripts/start.sh
-
-CMD ["/app/scripts/start.sh"]
+# Default command runs API
+CMD ["uvicorn", "incidentagent.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
