@@ -63,3 +63,14 @@ models/artifacts/
 
 # Temp
 eval_output.txt
+
+# Local-only docs
+docs/CLAUDE_INSTRUCTIONS.md
+docs/PHASE0_RESEARCH.md
+docs/PHASE1_ARCHITECTURE.md
+docs/RESOURCES.md
+docs/DEMO_SCRIPT.md
+incidentagent/DEPLOYMENT.md
+incidentagent/DOCKER.md
+incidentagent/DOCKER_README.md
+incidentagent/DOCKER_SUMMARY.md
