@@ -6,7 +6,7 @@ services:
       repo: novalis133/incident-agent
       branch: main
       deploy_on_push: true
-    source_dir: /
+    source_dir: /incidentagent
     dockerfile_path: Dockerfile
     http_port: 8000
     instance_count: 1
@@ -19,10 +19,6 @@ services:
         value: "true"
       - key: LOG_LEVEL
         value: INFO
-      - key: GRADIENT_API_TOKEN
-        type: SECRET
-      - key: GRADIENT_MODEL_ACCESS_KEY
-        type: SECRET
       - key: LLM_MODEL
         value: claude-sonnet-4-20250514
       - key: LLM_PROVIDER
@@ -39,7 +35,7 @@ services:
       repo: novalis133/incident-agent
       branch: main
       deploy_on_push: true
-    source_dir: /
+    source_dir: /incidentagent
     dockerfile_path: Dockerfile
     http_port: 8501
     instance_count: 1
@@ -52,10 +48,6 @@ services:
         value: "true"
       - key: LOG_LEVEL
         value: INFO
-      - key: GRADIENT_API_TOKEN
-        type: SECRET
-      - key: GRADIENT_MODEL_ACCESS_KEY
-        type: SECRET
       - key: API_URL
         value: ${api.PRIVATE_URL}
     routes:
