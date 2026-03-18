@@ -64,6 +64,9 @@ models/artifacts/
 # Temp
 eval_output.txt
 
+# Local-only folders
+demo_vedio/
+
 # Local-only docs
 docs/CLAUDE_INSTRUCTIONS.md
 docs/PHASE0_RESEARCH.md
